@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
@@ -59,34 +59,40 @@ const fadeUp = {
 };
 
 function Nav() {
-  const links = [
-    ["About", "#about"],
-    ["Products", "#products"],
-    ["CSR", "#csr"],
-    ["Education", "#education"],
-    ["Impact", "#impact"],
-    ["Contact", "#contact"],
+  const links: Array<[string, string, boolean]> = [
+    ["About", "#about", false],
+    ["Products", "#products", false],
+    ["CSR Projects", "/csr", true],
+    ["Education", "#education", false],
+    ["Impact", "#impact", false],
+    ["Contact", "#contact", false],
   ];
   return (
     <header className="fixed top-0 inset-x-0 z-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 mt-4">
         <div className="glass rounded-full pl-4 pr-2 py-2 flex items-center justify-between shadow-card">
-          <a href="#" className="flex items-center gap-2">
+          <a href="/" className="flex items-center gap-2">
             <img src={logo} alt="Torchit logo" className="h-8 w-auto" />
           </a>
           <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-foreground/80">
-            {links.map(([l, h]) => (
-              <a key={l} href={h} className="hover:text-foreground transition-colors">
-                {l}
-              </a>
-            ))}
+            {links.map(([l, h, isRoute]) =>
+              isRoute ? (
+                <Link key={l} to={h} className="hover:text-foreground transition-colors">
+                  {l}
+                </Link>
+              ) : (
+                <a key={l} href={h} className="hover:text-foreground transition-colors">
+                  {l}
+                </a>
+              ),
+            )}
           </nav>
-          <a
-            href="#contact"
+          <Link
+            to="/csr"
             className="bg-gradient-brand text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-card hover:shadow-glow transition-shadow"
           >
             Partner with us
-          </a>
+          </Link>
         </div>
       </div>
     </header>
@@ -695,13 +701,16 @@ function CTA() {
             </div>
             <div className="space-y-4">
               <a href="mailto:hello@torchit.in" className="flex items-center gap-4 glass rounded-2xl p-5 text-white">
-                <Mail className="w-5 h-5" /> hello@torchit.in
+                <Mail className="w-5 h-5" />
+                <span>hello@torchit.in</span>
               </a>
               <a href="tel:+910000000000" className="flex items-center gap-4 glass rounded-2xl p-5 text-white">
-                <Phone className="w-5 h-5" /> +91 — partnerships team
+                <Phone className="w-5 h-5" />
+                <span>+91 — partnerships team</span>
               </a>
               <div className="flex items-center gap-4 glass rounded-2xl p-5 text-white">
-                <MapPin className="w-5 h-5" /> Ahmedabad, India · Global delivery
+                <MapPin className="w-5 h-5" />
+                <span>Ahmedabad, India · Global delivery</span>
               </div>
             </div>
           </div>
