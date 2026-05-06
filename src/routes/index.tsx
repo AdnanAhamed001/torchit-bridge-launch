@@ -695,13 +695,16 @@ function CTA() {
             </div>
             <div className="space-y-4">
               <a href="mailto:hello@torchit.in" className="flex items-center gap-4 glass rounded-2xl p-5 text-white">
-                <Mail className="w-5 h-5" /> hello@torchit.in
+                <Mail className="w-5 h-5" />
+                <span>hello@torchit.in</span>
               </a>
               <a href="tel:+910000000000" className="flex items-center gap-4 glass rounded-2xl p-5 text-white">
-                <Phone className="w-5 h-5" /> +91 — partnerships team
+                <Phone className="w-5 h-5" />
+                <span>+91 — partnerships team</span>
               </a>
               <div className="flex items-center gap-4 glass rounded-2xl p-5 text-white">
-                <MapPin className="w-5 h-5" /> Ahmedabad, India · Global delivery
+                <MapPin className="w-5 h-5" />
+                <span>Ahmedabad, India · Global delivery</span>
               </div>
             </div>
           </div>
