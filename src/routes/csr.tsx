@@ -46,13 +46,13 @@ import gruh from "@/assets/partners/gruh.jpg";
 export const Route = createFileRoute("/csr")({
   head: () => ({
     meta: [
-      { title: "CSR Projects — Torchit | Disability Inclusion & Assistive Tech Partnerships" },
+      { title: "CSR Projects Torchit | Disability Inclusion & Assistive Tech Partnerships" },
       {
         name: "description",
         content:
           "Torchit CSR projects deliver assistive technology, inclusive education, accessibility awareness and skill development. Partner with us to scale measurable disability inclusion impact.",
       },
-      { property: "og:title", content: "Torchit CSR Projects — Disability Inclusion at Scale" },
+      { property: "og:title", content: "Torchit CSR Projects Disability Inclusion at Scale" },
       {
         property: "og:description",
         content:
@@ -123,7 +123,7 @@ function Hero() {
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl leading-relaxed">
             Torchit partners with corporations, governments, NGOs and global agencies to bridge the
-            accessibility gap — combining affordable assistive technology, inclusive education,
+            accessibility gap combining affordable assistive technology, inclusive education,
             training and community programs into measurable, long-term impact.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -191,7 +191,7 @@ function Intro() {
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
             Torchit CSR projects bridge the accessibility gap for persons with disabilities by
             combining assistive technology, inclusive education, awareness campaigns, training and
-            community support into scalable impact programs — focused on long-term empowerment, not
+            community support into scalable impact programs focused on long-term empowerment, not
             one-time distribution.
           </p>
           <div className="mt-8 grid sm:grid-cols-2 gap-3">
@@ -276,7 +276,7 @@ function Programs() {
       tone: "pink",
       tag: "AI Vision",
       name: "Jyoti AI Smart Glasses Programs",
-      desc: "AI-powered glasses for object recognition, text reading, currency identification, color detection and multilingual scene understanding — improving education, work and daily living.",
+      desc: "AI-powered glasses for object recognition, text reading, currency identification, color detection and multilingual scene understanding improving education, work and daily living.",
       benefits: ["Object recognition", "Text-to-speech", "Currency detection", "Multilingual support"],
       img: jyotiRecipients,
     },
@@ -285,7 +285,7 @@ function Programs() {
       tone: "orange",
       tag: "Education",
       name: "Saksharta Inclusive Education Kit",
-      desc: "End-to-end accessibility kit combining smart mobility tools, AI reading devices, accessible smartphones and tactile learning aids — built for inclusive classrooms.",
+      desc: "End-to-end accessibility kit combining smart mobility tools, AI reading devices, accessible smartphones and tactile learning aids built for inclusive classrooms.",
       benefits: ["Smart mobility tools", "AI reading devices", "Tactile aids", "Accessible smartphones"],
       img: studentKit,
     },
@@ -307,7 +307,7 @@ function Programs() {
             </h2>
           </div>
           <p className="max-w-md text-muted-foreground">
-            CSR-sponsored programs distribute Torchit devices to those who need them most — paired
+            CSR-sponsored programs distribute Torchit devices to those who need them most paired
             with training, awareness and on-ground support.
           </p>
         </motion.div>
@@ -359,7 +359,7 @@ function Education() {
           <span className="text-sm font-semibold text-[var(--brand-blue)] uppercase tracking-widest">Inclusive Education CSR</span>
           <h2 className="mt-3 text-4xl sm:text-5xl font-extrabold">AI-enabled inclusive classrooms</h2>
           <p className="mt-4 text-muted-foreground text-lg">
-            We partner with schools and institutions to make education accessible — from smart
+            We partner with schools and institutions to make education accessible from smart
             classroom infrastructure to teacher training in inclusive methods.
           </p>
         </motion.div>
@@ -435,7 +435,7 @@ function Skills() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <motion.div {...fadeUp} className="text-center max-w-2xl mx-auto mb-14">
           <span className="text-sm font-semibold text-[var(--brand-orange)] uppercase tracking-widest">Skill Development & Awareness</span>
-          <h2 className="mt-3 text-4xl sm:text-5xl font-extrabold">Beyond devices — building livelihoods</h2>
+          <h2 className="mt-3 text-4xl sm:text-5xl font-extrabold">Beyond devices building livelihoods</h2>
         </motion.div>
         <div className="grid md:grid-cols-3 gap-6">
           {cards.map(({ icon: I, title, points }, i) => (
@@ -691,10 +691,10 @@ function Quotation() {
           <div className="blob bg-[var(--brand-yellow)] w-[400px] h-[400px] -top-20 -right-20 opacity-40" />
           <Quote className="w-12 h-12 opacity-60 relative" />
           <p className="mt-6 text-3xl sm:text-4xl font-bold leading-snug relative max-w-3xl">
-            "Accessibility should be affordable, scalable, and available to everyone — that's how
+            "Accessibility should be affordable, scalable, and available to everyone that's how
             we build an inclusive future."
           </p>
-          <p className="mt-6 text-white/80 relative">— Torchit CSR Team</p>
+          <p className="mt-6 text-white/80 relative">  Torchit CSR Team</p>
         </motion.div>
       </div>
     </section>
@@ -758,7 +758,7 @@ function CTA() {
               </a>
               <a href="tel:+910000000000" className="flex items-center gap-4 glass rounded-2xl p-5 text-white">
                 <Phone className="w-5 h-5" />
-                <span>+91 — partnerships team</span>
+                <span>+91 partnerships team</span>
               </a>
               <div className="flex items-center gap-4 glass rounded-2xl p-5 text-white">
                 <MapPin className="w-5 h-5" />
