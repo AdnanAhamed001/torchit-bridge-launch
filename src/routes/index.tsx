@@ -101,7 +101,7 @@ function Nav() {
 
 function Hero() {
   return (
-    <section className="relative pt-20 pb-24 overflow-hidden">
+    <section className="relative pt-0 pb-24 overflow-hidden">
       <div className="blob bg-[var(--brand-blue)] w-[420px] h-[420px] -top-20 -left-20" />
       <div className="blob bg-[var(--brand-pink)] w-[380px] h-[380px] top-40 right-0" />
       <div className="blob bg-[var(--brand-yellow)] w-[300px] h-[300px] bottom-0 left-1/3 opacity-40" />
