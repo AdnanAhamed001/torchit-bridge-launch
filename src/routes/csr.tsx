@@ -756,9 +756,9 @@ function CTA() {
                 <Mail className="w-5 h-5" />
                 <span>hello@torchit.in</span>
               </a>
-              <a href="tel:+910000000000" className="flex items-center gap-4 glass rounded-2xl p-5 text-white">
+              <a href="tel:+917383635420" className="flex items-center gap-4 glass rounded-2xl p-5 text-white">
                 <Phone className="w-5 h-5" />
-                <span>+91 partnerships team</span>
+                <span>+91 73836 35420</span>
               </a>
               <div className="flex items-center gap-4 glass rounded-2xl p-5 text-white">
                 <MapPin className="w-5 h-5" />
