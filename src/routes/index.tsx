@@ -34,13 +34,13 @@ import careKits from "@/assets/care-kits.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Torchit — Empowering Millions Through Assistive Innovation" },
+      { title: "Torchit Empowering Millions Through Assistive Innovation" },
       {
         name: "description",
         content:
-          "Torchit builds affordable assistive technology — Saarthi Smart Cane, Jyoti AI Smart Glasses, Saksharta Inclusive Education Kit — and partners with corporations on CSR for disability inclusion.",
+          "Torchit builds affordable assistive technology Saarthi Smart Cane, Jyoti AI Smart Glasses, Saksharta Inclusive Education Kit and partners with corporations on CSR for disability inclusion.",
       },
-      { property: "og:title", content: "Torchit — Assistive Technology & CSR for Disability Inclusion" },
+      { property: "og:title", content: "Torchit Assistive Technology & CSR for Disability Inclusion" },
       {
         property: "og:description",
         content:
@@ -118,7 +118,7 @@ function Hero() {
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed">
             Affordable assistive technologies for mobility, education, communication, and
-            independent living — built for the next billion.
+            independent living built for the next billion.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
@@ -331,7 +331,7 @@ function Impact() {
             Creating real change across communities
           </h2>
           <p className="mt-4 text-muted-foreground text-lg">
-            Accessibility is not charity — accessibility is opportunity.
+            Accessibility is not charity accessibility is opportunity.
           </p>
         </motion.div>
 
@@ -417,7 +417,7 @@ function Products() {
             </h2>
           </div>
           <p className="max-w-md text-muted-foreground">
-            Each product is co-designed with users — built to navigate, learn, communicate and live independently.
+            Each product is co-designed with users built to navigate, learn, communicate and live independently.
           </p>
         </motion.div>
 
@@ -481,7 +481,7 @@ function CSR() {
           </div>
           <p className="text-muted-foreground text-lg">
             We work closely with partners to ensure transparent implementation, measurable
-            outcomes, and long-term community impact — aligned with the Companies Act 2013, ESG,
+            outcomes, and long-term community impact aligned with the Companies Act 2013, ESG,
             DEI, and SDG frameworks.
           </p>
         </motion.div>
@@ -538,7 +538,7 @@ function Education() {
           </h2>
           <p className="mt-5 text-muted-foreground text-lg">
             We partner with schools, NGOs and institutions to build accessible learning
-            environments — from assistive learning tech to teacher training in inclusive methods.
+            environments from assistive learning tech to teacher training in inclusive methods.
           </p>
           <ul className="mt-8 space-y-4">
             {[
@@ -706,7 +706,7 @@ function CTA() {
               </a>
               <a href="tel:+910000000000" className="flex items-center gap-4 glass rounded-2xl p-5 text-white">
                 <Phone className="w-5 h-5" />
-                <span>+91 — partnerships team</span>
+                <span>+91 partnerships team</span>
               </a>
               <div className="flex items-center gap-4 glass rounded-2xl p-5 text-white">
                 <MapPin className="w-5 h-5" />
