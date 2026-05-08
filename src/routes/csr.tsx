@@ -107,10 +107,6 @@ function Nav() {
 function Hero() {
   return (
     <section className="relative pt-0 pb-20 overflow-hidden">
-      <div className="blob bg-[var(--brand-pink)] w-[440px] h-[440px] -top-20 -left-20" />
-      <div className="blob bg-[var(--brand-blue)] w-[380px] h-[380px] top-32 right-0" />
-      <div className="blob bg-[var(--brand-yellow)] w-[280px] h-[280px] bottom-0 left-1/3 opacity-40" />
-
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <motion.div {...fadeUp} className="max-w-4xl">
           <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full text-xs font-semibold text-foreground/70 mb-6">
@@ -129,7 +125,7 @@ function Hero() {
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="#partner"
-              className="group bg-gradient-brand text-white px-7 py-4 rounded-full font-semibold shadow-card hover:shadow-glow transition-all inline-flex items-center gap-2"
+              className="group bg-gradient-brand text-white px-7 py-4 rounded-full font-semibold shadow-card hover:shadow-glow hover:-translate-y-0.5 transition-all inline-flex items-center gap-2"
             >
               Start a CSR Partnership
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -156,7 +152,7 @@ function Hero() {
             ["50+", "CSR partners"],
             ["5,000+", "Educators trained"],
           ].map(([n, l]) => (
-            <div key={l} className="glass rounded-3xl p-6 text-center shadow-card">
+            <div key={l} className="glass rounded-3xl p-6 text-center shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300">
               <div className="text-4xl font-extrabold text-gradient-brand">{n}</div>
               <div className="mt-2 text-sm text-muted-foreground">{l}</div>
             </div>
@@ -225,7 +221,7 @@ function ImpactPillars() {
     { icon: School, t: "Inclusive learning", d: "Teacher training and awareness drives." },
   ];
   return (
-    <section className="py-24 bg-soft">
+    <section className="py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <motion.div {...fadeUp} className="text-center max-w-2xl mx-auto mb-14">
           <span className="text-sm font-semibold text-[var(--brand-blue)] uppercase tracking-widest">How we create impact</span>
@@ -245,7 +241,7 @@ function ImpactPillars() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className="rounded-3xl p-7 bg-white border border-border hover:border-[var(--brand-blue)]/40 hover:shadow-card transition-all"
+              className="rounded-3xl p-7 bg-white border border-border shadow-sm hover:border-[var(--brand-blue)]/40 hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300"
             >
               <div className="w-12 h-12 rounded-2xl bg-gradient-brand text-white flex items-center justify-center mb-5">
                 <I className="w-5 h-5" />
@@ -320,7 +316,7 @@ function Programs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
-              className="group rounded-3xl border border-border bg-white overflow-hidden shadow-card hover:-translate-y-2 hover:shadow-glow transition-all"
+              className="group rounded-3xl border border-border bg-white overflow-hidden shadow-card hover:-translate-y-2 hover:shadow-card-hover hover:border-[var(--brand-blue)]/30 transition-all duration-300"
             >
               <div className="relative h-56 overflow-hidden">
                 <img src={p.img} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
@@ -353,7 +349,7 @@ function Programs() {
 
 function Education() {
   return (
-    <section className="py-28 bg-soft">
+    <section className="py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <motion.div {...fadeUp} className="text-center max-w-2xl mx-auto mb-14">
           <span className="text-sm font-semibold text-[var(--brand-blue)] uppercase tracking-widest">Inclusive Education CSR</span>
@@ -365,7 +361,7 @@ function Education() {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-6">
-          <motion.div {...fadeUp} className="rounded-3xl bg-white border border-border p-8 shadow-card">
+          <motion.div {...fadeUp} className="rounded-3xl bg-white border border-border p-8 shadow-card hover:shadow-card-hover hover:-translate-y-1 hover:border-[var(--brand-blue)]/30 transition-all duration-300">
             <div className="w-12 h-12 rounded-2xl bg-gradient-brand text-white flex items-center justify-center mb-5">
               <Lightbulb className="w-5 h-5" />
             </div>
@@ -386,7 +382,7 @@ function Education() {
             </ul>
           </motion.div>
 
-          <motion.div {...fadeUp} className="rounded-3xl bg-white border border-border p-8 shadow-card">
+          <motion.div {...fadeUp} className="rounded-3xl bg-white border border-border p-8 shadow-card hover:shadow-card-hover hover:-translate-y-1 hover:border-[var(--brand-blue)]/30 transition-all duration-300">
             <div className="w-12 h-12 rounded-2xl bg-gradient-warm text-white flex items-center justify-center mb-5">
               <GraduationCap className="w-5 h-5" />
             </div>
@@ -445,7 +441,7 @@ function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className="rounded-3xl p-8 bg-white border border-border hover:shadow-card transition-shadow"
+              className="rounded-3xl p-8 bg-white border border-border shadow-sm hover:shadow-card-hover hover:-translate-y-1 hover:border-[var(--brand-blue)]/30 transition-all duration-300"
             >
               <div className="w-12 h-12 rounded-2xl bg-gradient-brand text-white flex items-center justify-center mb-5">
                 <I className="w-5 h-5" />
@@ -488,7 +484,7 @@ function PartnerLogos() {
           {logos.map((l) => (
             <div
               key={l.name}
-              className="h-24 rounded-2xl border border-border bg-white flex items-center justify-center p-4 hover:shadow-card transition-shadow"
+              className="h-24 rounded-2xl border border-border bg-white flex items-center justify-center p-4 hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300"
             >
               <img
                 src={l.src}
@@ -528,7 +524,7 @@ function Partners() {
     },
   ];
   return (
-    <section id="partners" className="py-28 bg-soft">
+    <section id="partners" className="py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <motion.div {...fadeUp} className="text-center max-w-2xl mx-auto mb-14">
           <span className="text-sm font-semibold text-[var(--brand-pink)] uppercase tracking-widest">Collaborators</span>
@@ -536,7 +532,7 @@ function Partners() {
         </motion.div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {groups.map(({ title, icon: I, list }) => (
-            <div key={title} className="rounded-3xl border border-border p-7 bg-white hover:shadow-card transition-shadow">
+            <div key={title} className="rounded-3xl border border-border p-7 bg-white shadow-sm hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300">
               <div className="w-11 h-11 rounded-2xl bg-gradient-brand text-white flex items-center justify-center mb-4">
                 <I className="w-5 h-5" />
               </div>
@@ -593,7 +589,7 @@ function Models() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className="relative rounded-3xl p-8 bg-white border border-border shadow-card hover:-translate-y-2 hover:shadow-glow transition-all"
+              className="relative rounded-3xl p-8 bg-white border border-border shadow-card hover:-translate-y-2 hover:shadow-card-hover hover:border-[var(--brand-blue)]/30 transition-all duration-300"
             >
               <div className="w-14 h-14 rounded-2xl bg-gradient-brand text-white flex items-center justify-center mb-5">
                 <I className="w-6 h-6" />
@@ -633,7 +629,7 @@ function Impact() {
     "Real, measurable impact",
   ];
   return (
-    <section id="impact" className="py-28 bg-soft">
+    <section id="impact" className="py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <motion.div {...fadeUp} className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-sm font-semibold text-[var(--brand-pink)] uppercase tracking-widest">CSR Impact Metrics</span>
@@ -651,7 +647,7 @@ function Impact() {
               className="relative group"
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${s.g} rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity`} />
-              <div className="relative bg-white rounded-3xl p-8 border border-border shadow-card hover:-translate-y-2 transition-transform">
+              <div className="relative bg-white rounded-3xl p-8 border border-border shadow-card hover:-translate-y-2 hover:shadow-card-hover hover:border-[var(--brand-blue)]/30 transition-all duration-300">
                 <div className={`text-5xl font-extrabold bg-gradient-to-br ${s.g} bg-clip-text text-transparent`}>
                   {s.n}
                 </div>
@@ -665,7 +661,7 @@ function Impact() {
           <div className="rounded-3xl overflow-hidden shadow-card">
             <img src={careKits} alt="Distribution kits" className="w-full h-full object-cover min-h-[320px]" loading="lazy" />
           </div>
-          <div className="rounded-3xl bg-white border border-border p-8 shadow-card">
+          <div className="rounded-3xl bg-white border border-border p-8 shadow-card hover:shadow-card-hover hover:-translate-y-1 hover:border-[var(--brand-blue)]/30 transition-all duration-300">
             <span className="text-xs font-bold uppercase tracking-widest text-[var(--brand-blue)]">Why partner with Torchit</span>
             <h3 className="mt-2 text-3xl font-bold">Innovation, inclusion, impact</h3>
             <ul className="mt-6 grid sm:grid-cols-2 gap-3">
@@ -688,7 +684,6 @@ function Quotation() {
     <section className="py-20">
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
         <motion.div {...fadeUp} className="rounded-[2.5rem] bg-gradient-brand text-white p-12 sm:p-16 shadow-glow relative overflow-hidden">
-          <div className="blob bg-[var(--brand-yellow)] w-[400px] h-[400px] -top-20 -right-20 opacity-40" />
           <Quote className="w-12 h-12 opacity-60 relative" />
           <p className="mt-6 text-3xl sm:text-4xl font-bold leading-snug relative max-w-3xl">
             "Accessibility should be affordable, scalable, and available to everyone that's how
@@ -713,7 +708,7 @@ function FAQ() {
     { q: "How can organizations partner with Torchit for CSR projects?", a: "Through device sponsorships, inclusive education initiatives, accessibility infrastructure projects, awareness campaigns, and skill development programs." },
   ];
   return (
-    <section id="faq" className="py-28 bg-soft">
+    <section id="faq" className="py-28">
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
         <motion.div {...fadeUp} className="text-center mb-14">
           <span className="text-sm font-semibold text-[var(--brand-pink)] uppercase tracking-widest">FAQ</span>
@@ -740,7 +735,6 @@ function CTA() {
     <section className="py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="relative rounded-[2.5rem] overflow-hidden bg-gradient-brand p-10 sm:p-16 shadow-glow">
-          <div className="blob bg-[var(--brand-yellow)] w-[400px] h-[400px] -top-20 -right-20 opacity-40" />
           <div className="relative grid lg:grid-cols-2 gap-10 items-center text-white">
             <div>
               <h2 className="text-4xl sm:text-5xl font-extrabold leading-tight">
@@ -752,15 +746,15 @@ function CTA() {
               </p>
             </div>
             <div className="space-y-4">
-              <a href="mailto:hello@torchit.in" className="flex items-center gap-4 glass rounded-2xl p-5 text-white">
+              <a href="mailto:hello@torchit.in" className="flex items-center gap-4 glass rounded-2xl p-5 text-white hover:bg-white/10 hover:-translate-y-1 transition-all duration-300">
                 <Mail className="w-5 h-5" />
                 <span>hello@torchit.in</span>
               </a>
-              <a href="tel:+917383635420" className="flex items-center gap-4 glass rounded-2xl p-5 text-white">
+              <a href="tel:+917383635420" className="flex items-center gap-4 glass rounded-2xl p-5 text-white hover:bg-white/10 hover:-translate-y-1 transition-all duration-300">
                 <Phone className="w-5 h-5" />
                 <span>+91 73836 35420</span>
               </a>
-              <div className="flex items-center gap-4 glass rounded-2xl p-5 text-white">
+              <div className="flex items-center gap-4 glass rounded-2xl p-5 text-white hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 cursor-default">
                 <MapPin className="w-5 h-5" />
                 <span>Ahmedabad, India · Global delivery</span>
               </div>

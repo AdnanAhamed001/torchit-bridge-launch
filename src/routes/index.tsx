@@ -102,10 +102,6 @@ function Nav() {
 function Hero() {
   return (
     <section className="relative pt-0 pb-24 overflow-hidden">
-      <div className="blob bg-[var(--brand-blue)] w-[420px] h-[420px] -top-20 -left-20" />
-      <div className="blob bg-[var(--brand-pink)] w-[380px] h-[380px] top-40 right-0" />
-      <div className="blob bg-[var(--brand-yellow)] w-[300px] h-[300px] bottom-0 left-1/3 opacity-40" />
-
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
         <motion.div {...fadeUp}>
           <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full text-xs font-semibold text-foreground/70 mb-6">
@@ -123,7 +119,7 @@ function Hero() {
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href="#products"
-              className="group bg-gradient-brand text-white px-7 py-4 rounded-full font-semibold shadow-card hover:shadow-glow transition-all inline-flex items-center gap-2"
+              className="group bg-gradient-brand text-white px-7 py-4 rounded-full font-semibold shadow-card hover:shadow-glow hover:-translate-y-0.5 transition-all inline-flex items-center gap-2"
             >
               Explore Products
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -206,7 +202,7 @@ function FloatingCard({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.6, duration: 0.6 }}
-      className={`glass rounded-2xl p-3 pr-5 flex items-center gap-3 shadow-card ${className ?? ""}`}
+      className={`glass rounded-2xl p-3 pr-5 flex items-center gap-3 shadow-card hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 ${className ?? ""}`}
     >
       <div
         className={`w-9 h-9 rounded-xl flex items-center justify-center text-white ${
@@ -239,7 +235,7 @@ function LogoWall() {
     "UNICEF",
   ];
   return (
-    <section className="py-16 border-y border-border bg-soft">
+    <section className="py-16 border-y border-border">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <p className="text-center text-xs uppercase tracking-[0.2em] text-muted-foreground mb-8">
           Trusted by leaders in CSR & global development
@@ -296,7 +292,7 @@ function About() {
               { icon: Users, t: "DEI & Inclusion", d: "Disability-first design" },
               { icon: GraduationCap, t: "Inclusive Education", d: "Accessible classrooms" },
             ].map(({ icon: I, t, d }) => (
-              <div key={t} className="flex gap-3 items-start p-4 rounded-2xl border border-border hover:shadow-card transition-shadow">
+              <div key={t} className="flex gap-3 items-start p-4 rounded-2xl border border-border bg-white shadow-sm hover:shadow-card-hover hover:-translate-y-1 hover:border-[var(--brand-blue)]/30 transition-all duration-300">
                 <div className="w-10 h-10 rounded-xl bg-gradient-brand text-white flex items-center justify-center shrink-0">
                   <I className="w-5 h-5" />
                 </div>
@@ -321,7 +317,7 @@ function Impact() {
     { n: "18+", l: "Countries Reached", g: "from-[var(--brand-yellow)] to-[var(--brand-blue)]" },
   ];
   return (
-    <section id="impact" className="py-28 bg-soft relative">
+    <section id="impact" className="py-28 relative">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <motion.div {...fadeUp} className="text-center max-w-2xl mx-auto mb-16">
           <span className="text-sm font-semibold text-[var(--brand-blue)] uppercase tracking-widest">
@@ -346,7 +342,7 @@ function Impact() {
               className="relative group"
             >
               <div className={`absolute inset-0 bg-gradient-to-br ${s.g} rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity`} />
-              <div className="relative bg-white rounded-3xl p-8 border border-border shadow-card hover:-translate-y-2 transition-transform">
+              <div className="relative bg-white rounded-3xl p-8 border border-border shadow-card hover:-translate-y-2 hover:shadow-card-hover hover:border-[var(--brand-blue)]/30 transition-all duration-300">
                 <div className={`text-5xl font-extrabold bg-gradient-to-br ${s.g} bg-clip-text text-transparent`}>
                   {s.n}
                 </div>
@@ -429,7 +425,7 @@ function Products() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
-              className="group rounded-3xl border border-border bg-white overflow-hidden shadow-card hover:-translate-y-2 hover:shadow-glow transition-all"
+              className="group rounded-3xl border border-border bg-white overflow-hidden shadow-card hover:-translate-y-2 hover:shadow-card-hover hover:border-[var(--brand-blue)]/30 transition-all duration-300"
             >
               <div className="relative h-56 overflow-hidden">
                 <img src={p.img} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
@@ -469,7 +465,6 @@ function CSR() {
   ];
   return (
     <section id="csr" className="py-28 relative overflow-hidden">
-      <div className="blob bg-[var(--brand-blue)] w-[500px] h-[500px] top-20 -right-40" />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 relative">
         <motion.div {...fadeUp} className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
@@ -494,7 +489,7 @@ function CSR() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className="p-6 rounded-3xl bg-white border border-border hover:border-[var(--brand-blue)]/40 hover:shadow-card transition-all group"
+              className="p-6 rounded-3xl bg-white border border-border shadow-sm hover:border-[var(--brand-blue)]/40 hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 group"
             >
               <div className="w-12 h-12 rounded-2xl bg-gradient-brand text-white flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <I className="w-5 h-5" />
@@ -529,7 +524,7 @@ function CSR() {
 
 function Education() {
   return (
-    <section id="education" className="py-28 bg-soft">
+    <section id="education" className="py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 grid lg:grid-cols-2 gap-16 items-center">
         <motion.div {...fadeUp}>
           <span className="text-sm font-semibold text-[var(--brand-blue)] uppercase tracking-widest">Inclusive Education</span>
@@ -604,7 +599,7 @@ function Partners() {
         </motion.div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {groups.map((g) => (
-            <div key={g.title} className="rounded-3xl border border-border p-7 bg-white hover:shadow-card transition-shadow">
+            <div key={g.title} className="rounded-3xl border border-border p-7 bg-white shadow-sm hover:shadow-card-hover hover:-translate-y-1 hover:border-[var(--brand-blue)]/30 transition-all duration-300">
               <h3 className="font-bold text-lg text-gradient-brand">{g.title}</h3>
               <ul className="mt-4 space-y-2 text-sm text-foreground/80">
                 {g.list.map((n) => (
@@ -658,7 +653,7 @@ function FAQ() {
     },
   ];
   return (
-    <section className="py-28 bg-soft">
+    <section className="py-28">
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
         <motion.div {...fadeUp} className="text-center mb-14">
           <span className="text-sm font-semibold text-[var(--brand-pink)] uppercase tracking-widest">FAQ</span>
@@ -688,7 +683,6 @@ function CTA() {
     <section id="contact" className="py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="relative rounded-[2.5rem] overflow-hidden bg-gradient-brand p-10 sm:p-16 shadow-glow">
-          <div className="blob bg-[var(--brand-yellow)] w-[400px] h-[400px] -top-20 -right-20 opacity-40" />
           <div className="relative grid lg:grid-cols-2 gap-10 items-center text-white">
             <div>
               <h2 className="text-4xl sm:text-5xl font-extrabold leading-tight">
@@ -700,15 +694,15 @@ function CTA() {
               </p>
             </div>
             <div className="space-y-4">
-              <a href="mailto:hello@torchit.in" className="flex items-center gap-4 glass rounded-2xl p-5 text-white">
+              <a href="mailto:hello@torchit.in" className="flex items-center gap-4 glass rounded-2xl p-5 text-white hover:bg-white/10 hover:-translate-y-1 transition-all duration-300">
                 <Mail className="w-5 h-5" />
                 <span>hello@torchit.in</span>
               </a>
-              <a href="tel:+910000000000" className="flex items-center gap-4 glass rounded-2xl p-5 text-white">
+              <a href="tel:+910000000000" className="flex items-center gap-4 glass rounded-2xl p-5 text-white hover:bg-white/10 hover:-translate-y-1 transition-all duration-300">
                 <Phone className="w-5 h-5" />
                 <span>+91 partnerships team</span>
               </a>
-              <div className="flex items-center gap-4 glass rounded-2xl p-5 text-white">
+              <div className="flex items-center gap-4 glass rounded-2xl p-5 text-white hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 cursor-default">
                 <MapPin className="w-5 h-5" />
                 <span>Ahmedabad, India · Global delivery</span>
               </div>
