@@ -101,7 +101,7 @@ function Nav() {
 
 function Hero() {
   return (
-    <section className="relative pt-36 pb-24 overflow-hidden">
+    <section className="relative pt-20 pb-24 overflow-hidden">
       <div className="blob bg-[var(--brand-blue)] w-[420px] h-[420px] -top-20 -left-20" />
       <div className="blob bg-[var(--brand-pink)] w-[380px] h-[380px] top-40 right-0" />
       <div className="blob bg-[var(--brand-yellow)] w-[300px] h-[300px] bottom-0 left-1/3 opacity-40" />
@@ -725,7 +725,7 @@ function Footer() {
     <footer className="border-t border-border py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 flex flex-col sm:flex-row justify-between gap-6 items-center">
         <div className="flex items-center gap-3">
-          <img src={logo} alt="Torchit" className="h-8" />
+          <span className="font-display text-lg font-bold">Torchit</span>
         </div>
         <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} Torchit. Make more possible.</p>
       </div>
@@ -736,7 +736,6 @@ function Footer() {
 function Index() {
   return (
     <div className="min-h-screen bg-background">
-      <Nav />
       <main>
         <Hero />
         <LogoWall />
