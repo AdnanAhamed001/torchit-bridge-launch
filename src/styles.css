@@ -52,10 +52,10 @@
 :root {
   --radius: 1rem;
 
-  --brand-blue: oklch(0.66 0.19 250);
-  --brand-pink: oklch(0.68 0.24 5);
-  --brand-yellow: oklch(0.86 0.16 88);
-  --brand-orange: oklch(0.72 0.19 45);
+  --brand-blue: #1c8bfd;
+  --brand-pink: #fd4179;
+  --brand-orange: #fd7545;
+  --brand-yellow: #fdb802;
   --ink: oklch(0.18 0.01 260);
   --soft: oklch(0.975 0.005 250);
 
@@ -78,10 +78,6 @@
   --border: oklch(0.92 0.01 250);
   --input: oklch(0.94 0.01 250);
   --ring: var(--brand-blue);
-
-  --gradient-brand: linear-gradient(135deg, oklch(0.66 0.19 250), oklch(0.68 0.24 5));
-  --gradient-warm: linear-gradient(135deg, oklch(0.86 0.16 88), oklch(0.72 0.19 45));
-  --gradient-soft: linear-gradient(180deg, #ffffff 0%, #F7F9FC 100%);
 }
 
 .dark {
@@ -112,14 +108,11 @@
 
 @layer utilities {
   .text-gradient-brand {
-    background: var(--gradient-brand);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: var(--brand-blue);
   }
-  .bg-gradient-brand { background: var(--gradient-brand); }
-  .bg-gradient-warm { background: var(--gradient-warm); }
-  .bg-gradient-soft { background: var(--gradient-soft); }
+  .bg-gradient-brand { background: var(--brand-blue); }
+  .bg-gradient-warm { background: var(--brand-orange); }
+  .bg-gradient-soft { background: var(--soft); }
   .glass {
     background: color-mix(in oklab, var(--card) 85%, transparent);
     backdrop-filter: blur(24px);

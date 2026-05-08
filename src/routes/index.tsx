@@ -293,7 +293,7 @@ function About() {
               { icon: GraduationCap, t: "Inclusive Education", d: "Accessible classrooms" },
             ].map(({ icon: I, t, d }) => (
               <div key={t} className="flex gap-3 items-start p-4 rounded-2xl border border-border bg-white shadow-sm hover:shadow-card-hover hover:-translate-y-1 hover:border-[var(--brand-blue)]/30 transition-all duration-300">
-                <div className="w-10 h-10 rounded-xl bg-gradient-brand text-white flex items-center justify-center shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-[var(--brand-orange)] text-white flex items-center justify-center shrink-0">
                   <I className="w-5 h-5" />
                 </div>
                 <div>
@@ -311,10 +311,10 @@ function About() {
 
 function Impact() {
   const stats = [
-    { n: "1.2M+", l: "Lives Impacted", g: "from-[var(--brand-blue)] to-[var(--brand-pink)]" },
-    { n: "10K+", l: "Families Target by 2030", g: "from-[var(--brand-pink)] to-[var(--brand-orange)]" },
-    { n: "50+", l: "CSR Partners", g: "from-[var(--brand-orange)] to-[var(--brand-yellow)]" },
-    { n: "18+", l: "Countries Reached", g: "from-[var(--brand-yellow)] to-[var(--brand-blue)]" },
+    { n: "1.2M+", l: "Lives Impacted", c: "blue" },
+    { n: "10K+", l: "Families Target by 2030", c: "pink" },
+    { n: "50+", l: "CSR Partners", c: "orange" },
+    { n: "18+", l: "Countries Reached", c: "yellow" },
   ];
   return (
     <section id="impact" className="py-28 relative">
@@ -341,9 +341,9 @@ function Impact() {
               transition={{ delay: i * 0.1, duration: 0.6 }}
               className="relative group"
             >
-              <div className={`absolute inset-0 bg-gradient-to-br ${s.g} rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity`} />
+              <div className={`absolute inset-0 bg-[var(--brand-${s.c})] rounded-3xl opacity-0 group-hover:opacity-15 blur-xl transition-opacity`} />
               <div className="relative bg-white rounded-3xl p-8 border border-border shadow-card hover:-translate-y-2 hover:shadow-card-hover hover:border-[var(--brand-blue)]/30 transition-all duration-300">
-                <div className={`text-5xl font-extrabold bg-gradient-to-br ${s.g} bg-clip-text text-transparent`}>
+                <div className={`text-5xl font-extrabold text-[var(--brand-${s.c})]`}>
                   {s.n}
                 </div>
                 <div className="mt-3 text-foreground font-medium">{s.l}</div>
@@ -489,9 +489,9 @@ function CSR() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05 }}
-              className="p-6 rounded-3xl bg-white border border-border shadow-sm hover:border-[var(--brand-blue)]/40 hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 group"
+              className="p-6 rounded-3xl bg-white border border-border shadow-sm hover:border-[var(--brand-pink)]/40 hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300 group"
             >
-              <div className="w-12 h-12 rounded-2xl bg-gradient-brand text-white flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <div className="w-12 h-12 rounded-2xl bg-[var(--brand-pink)] text-white flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                 <I className="w-5 h-5" />
               </div>
               <div className="font-semibold">{t}</div>
@@ -682,28 +682,28 @@ function CTA() {
   return (
     <section id="contact" className="py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="relative rounded-[2.5rem] overflow-hidden bg-gradient-brand p-10 sm:p-16 shadow-glow">
-          <div className="relative grid lg:grid-cols-2 gap-10 items-center text-white">
+        <div className="relative rounded-[2.5rem] overflow-hidden bg-white border border-border p-10 sm:p-16 shadow-card">
+          <div className="relative grid lg:grid-cols-2 gap-10 items-center text-foreground">
             <div>
               <h2 className="text-4xl sm:text-5xl font-extrabold leading-tight">
                 Build a more inclusive future, together.
               </h2>
-              <p className="mt-5 text-white/85 text-lg">
+              <p className="mt-5 text-muted-foreground text-lg">
                 Partner with Torchit to scale assistive technology and accessibility programs that
                 create measurable, lasting change.
               </p>
             </div>
             <div className="space-y-4">
-              <a href="mailto:hello@torchit.in" className="flex items-center gap-4 glass rounded-2xl p-5 text-white hover:bg-white/10 hover:-translate-y-1 transition-all duration-300">
-                <Mail className="w-5 h-5" />
-                <span>hello@torchit.in</span>
+              <a href="mailto:hello@mytorchit.com" className="flex items-center gap-4 border border-border bg-secondary/50 rounded-2xl p-5 text-foreground hover:bg-secondary hover:-translate-y-1 transition-all duration-300">
+                <Mail className="w-5 h-5 text-[var(--brand-pink)]" />
+                <span>hello@mytorchit.com</span>
               </a>
-              <a href="tel:+910000000000" className="flex items-center gap-4 glass rounded-2xl p-5 text-white hover:bg-white/10 hover:-translate-y-1 transition-all duration-300">
-                <Phone className="w-5 h-5" />
-                <span>+91 partnerships team</span>
+              <a href="tel:+917383635420" className="flex items-center gap-4 border border-border bg-secondary/50 rounded-2xl p-5 text-foreground hover:bg-secondary hover:-translate-y-1 transition-all duration-300">
+                <Phone className="w-5 h-5 text-[var(--brand-orange)]" />
+                <span>+91 73836 35420</span>
               </a>
-              <div className="flex items-center gap-4 glass rounded-2xl p-5 text-white hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 cursor-default">
-                <MapPin className="w-5 h-5" />
+              <div className="flex items-center gap-4 border border-border bg-secondary/50 rounded-2xl p-5 text-foreground hover:bg-secondary hover:-translate-y-1 transition-all duration-300 cursor-default">
+                <MapPin className="w-5 h-5 text-[var(--brand-blue)]" />
                 <span>Ahmedabad, India · Global delivery</span>
               </div>
             </div>

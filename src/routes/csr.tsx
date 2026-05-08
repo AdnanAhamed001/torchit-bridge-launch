@@ -213,12 +213,12 @@ function Intro() {
 
 function ImpactPillars() {
   const items = [
-    { icon: Accessibility, t: "Independent mobility", d: "Confident, safer movement in public spaces." },
-    { icon: BookOpen, t: "Access to education", d: "Inclusive classrooms and accessible learning." },
-    { icon: Cpu, t: "Digital accessibility", d: "Smartphones, screen readers, AI tools." },
-    { icon: Megaphone, t: "Communication support", d: "AI-powered reading & assistive devices." },
-    { icon: Briefcase, t: "Employment readiness", d: "Skill, mentorship and career programs." },
-    { icon: School, t: "Inclusive learning", d: "Teacher training and awareness drives." },
+    { icon: Accessibility, t: "Independent mobility", d: "Confident, safer movement in public spaces.", c: "blue" },
+    { icon: BookOpen, t: "Access to education", d: "Inclusive classrooms and accessible learning.", c: "pink" },
+    { icon: Cpu, t: "Digital accessibility", d: "Smartphones, screen readers, AI tools.", c: "orange" },
+    { icon: Megaphone, t: "Communication support", d: "AI-powered reading & assistive devices.", c: "yellow" },
+    { icon: Briefcase, t: "Employment readiness", d: "Skill, mentorship and career programs.", c: "orange" },
+    { icon: School, t: "Inclusive learning", d: "Teacher training and awareness drives.", c: "blue" },
   ];
   return (
     <section className="py-24">
@@ -234,7 +234,7 @@ function ImpactPillars() {
           </p>
         </motion.div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {items.map(({ icon: I, t, d }, i) => (
+          {items.map(({ icon: I, t, d, c }, i) => (
             <motion.div
               key={t}
               initial={{ opacity: 0, y: 20 }}
@@ -243,7 +243,7 @@ function ImpactPillars() {
               transition={{ delay: i * 0.05 }}
               className="rounded-3xl p-7 bg-white border border-border shadow-sm hover:border-[var(--brand-blue)]/40 hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="w-12 h-12 rounded-2xl bg-gradient-brand text-white flex items-center justify-center mb-5">
+              <div className={`w-12 h-12 rounded-2xl bg-[var(--brand-${c})] text-white flex items-center justify-center mb-5`}>
                 <I className="w-5 h-5" />
               </div>
               <div className="font-bold text-lg">{t}</div>
@@ -414,16 +414,19 @@ function Skills() {
       icon: Cpu,
       title: "Digital Literacy Programs",
       points: ["Accessible technology usage", "Smartphone accessibility", "Screen reader navigation", "Online learning tools"],
+      c: "blue"
     },
     {
       icon: Briefcase,
       title: "Employment & Entrepreneurship",
       points: ["Python programming training", "UI/UX accessibility programs", "Career-readiness workshops", "Entrepreneurship mentoring"],
+      c: "yellow"
     },
     {
       icon: Megaphone,
       title: "Awareness & Sensitization",
       points: ["Community workshops", "School awareness sessions", "Accessibility demonstrations", "Inclusive tech awareness"],
+      c: "pink"
     },
   ];
   return (
@@ -434,7 +437,7 @@ function Skills() {
           <h2 className="mt-3 text-4xl sm:text-5xl font-extrabold">Beyond devices building livelihoods</h2>
         </motion.div>
         <div className="grid md:grid-cols-3 gap-6">
-          {cards.map(({ icon: I, title, points }, i) => (
+          {cards.map(({ icon: I, title, points, c }, i) => (
             <motion.div
               key={title}
               initial={{ opacity: 0, y: 20 }}
@@ -443,7 +446,7 @@ function Skills() {
               transition={{ delay: i * 0.08 }}
               className="rounded-3xl p-8 bg-white border border-border shadow-sm hover:shadow-card-hover hover:-translate-y-1 hover:border-[var(--brand-blue)]/30 transition-all duration-300"
             >
-              <div className="w-12 h-12 rounded-2xl bg-gradient-brand text-white flex items-center justify-center mb-5">
+              <div className={`w-12 h-12 rounded-2xl bg-[var(--brand-${c})] text-white flex items-center justify-center mb-5`}>
                 <I className="w-5 h-5" />
               </div>
               <h3 className="font-bold text-xl">{title}</h3>
@@ -506,21 +509,25 @@ function Partners() {
       title: "Corporate & PSU",
       icon: Building2,
       list: ["ONGC", "Oil India Limited", "HDFC Bank", "Bank of America", "Wagh Bakri Tea Group", "Syngenta", "Meta", "MLM India"],
+      c: "blue"
     },
     {
       title: "International & Institutional",
       icon: Globe,
       list: ["United Nations", "WHO", "UNESCO", "USAID", "RNIB", "IDA", "GDI Hub"],
+      c: "orange"
     },
     {
       title: "Academic & Research",
       icon: GraduationCap,
       list: ["IIT Madras", "IIT Bombay", "PDEU"],
+      c: "pink"
     },
     {
       title: "NGO & Disability Sector",
       icon: HandHeart,
       list: ["National Association for the Blind (NAB)", "Blind People's Association (BPA)", "Enable India", "Sightsavers", "Bangladesh Protibandhi Foundation"],
+      c: "orange"
     },
   ];
   return (
@@ -531,16 +538,16 @@ function Partners() {
           <h2 className="mt-3 text-4xl sm:text-5xl font-extrabold">Built with the world's leading institutions</h2>
         </motion.div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {groups.map(({ title, icon: I, list }) => (
+          {groups.map(({ title, icon: I, list, c }) => (
             <div key={title} className="rounded-3xl border border-border p-7 bg-white shadow-sm hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300">
-              <div className="w-11 h-11 rounded-2xl bg-gradient-brand text-white flex items-center justify-center mb-4">
+              <div className={`w-11 h-11 rounded-2xl bg-[var(--brand-${c})] text-white flex items-center justify-center mb-4`}>
                 <I className="w-5 h-5" />
               </div>
               <h3 className="font-bold text-lg">{title}</h3>
               <ul className="mt-4 space-y-2 text-sm text-foreground/80">
                 {list.map((n) => (
                   <li key={n} className="flex items-start gap-2">
-                    <div className="w-1 h-1 rounded-full bg-[var(--brand-pink)] mt-2 shrink-0" />
+                    <div className={`w-1 h-1 rounded-full bg-[var(--brand-${c})] mt-2 shrink-0`} />
                     <span>{n}</span>
                   </li>
                 ))}
@@ -560,18 +567,21 @@ function Models() {
       title: "Device Sponsorship",
       desc: "Sponsor assistive devices reaching beneficiaries directly.",
       items: ["Saarthi Smart Cane", "Jyoti AI Smart Glasses", "Saksharta Education Kits", "Accessible learning devices"],
+      c: "pink"
     },
     {
       icon: School,
       title: "Inclusive Education Programs",
       desc: "Build accessible classrooms and educator capacity.",
       items: ["Smart inclusive classrooms", "Teacher training initiatives", "Accessible education infrastructure", "Digital learning accessibility"],
+      c: "blue"
     },
     {
       icon: Building2,
       title: "Resource Centers & Infrastructure",
       desc: "Long-term hubs for accessibility and rehabilitation.",
       items: ["Inclusive technology libraries", "Accessibility resource centers", "Community support hubs", "Training & rehabilitation spaces"],
+      c: "yellow"
     },
   ];
   return (
@@ -582,7 +592,7 @@ function Models() {
           <h2 className="mt-3 text-4xl sm:text-5xl font-extrabold">Choose how you want to create impact</h2>
         </motion.div>
         <div className="grid md:grid-cols-3 gap-6">
-          {models.map(({ icon: I, title, desc, items }, i) => (
+          {models.map(({ icon: I, title, desc, items, c }, i) => (
             <motion.div
               key={title}
               initial={{ opacity: 0, y: 30 }}
@@ -591,7 +601,7 @@ function Models() {
               transition={{ delay: i * 0.08 }}
               className="relative rounded-3xl p-8 bg-white border border-border shadow-card hover:-translate-y-2 hover:shadow-card-hover hover:border-[var(--brand-blue)]/30 transition-all duration-300"
             >
-              <div className="w-14 h-14 rounded-2xl bg-gradient-brand text-white flex items-center justify-center mb-5">
+              <div className={`w-14 h-14 rounded-2xl bg-[var(--brand-${c})] text-white flex items-center justify-center mb-5`}>
                 <I className="w-6 h-6" />
               </div>
               <h3 className="text-2xl font-bold">{title}</h3>
@@ -599,7 +609,7 @@ function Models() {
               <ul className="mt-5 space-y-2">
                 {items.map((it) => (
                   <li key={it} className="flex items-start gap-2 text-sm text-foreground/80">
-                    <CheckCircle2 className="w-4 h-4 text-[var(--brand-blue)] mt-0.5 shrink-0" />
+                    <CheckCircle2 className={`w-4 h-4 text-[var(--brand-${c})] mt-0.5 shrink-0`} />
                     {it}
                   </li>
                 ))}
@@ -614,10 +624,10 @@ function Models() {
 
 function Impact() {
   const stats = [
-    { n: "1.2M+", l: "Lives impacted", g: "from-[var(--brand-blue)] to-[var(--brand-pink)]" },
-    { n: "100K+", l: "Beneficiaries reached", g: "from-[var(--brand-pink)] to-[var(--brand-orange)]" },
-    { n: "50+", l: "CSR & institutional partners", g: "from-[var(--brand-orange)] to-[var(--brand-yellow)]" },
-    { n: "18+", l: "Countries impacted", g: "from-[var(--brand-yellow)] to-[var(--brand-blue)]" },
+    { n: "1.2M+", l: "Lives impacted", c: "blue" },
+    { n: "100K+", l: "Beneficiaries reached", c: "pink" },
+    { n: "50+", l: "CSR & institutional partners", c: "orange" },
+    { n: "18+", l: "Countries impacted", c: "yellow" },
   ];
   const why = [
     "Affordable assistive technology solutions",
@@ -646,9 +656,9 @@ function Impact() {
               transition={{ delay: i * 0.1, duration: 0.6 }}
               className="relative group"
             >
-              <div className={`absolute inset-0 bg-gradient-to-br ${s.g} rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity`} />
+              <div className={`absolute inset-0 bg-[var(--brand-${s.c})] rounded-3xl opacity-0 group-hover:opacity-15 blur-xl transition-opacity`} />
               <div className="relative bg-white rounded-3xl p-8 border border-border shadow-card hover:-translate-y-2 hover:shadow-card-hover hover:border-[var(--brand-blue)]/30 transition-all duration-300">
-                <div className={`text-5xl font-extrabold bg-gradient-to-br ${s.g} bg-clip-text text-transparent`}>
+                <div className={`text-5xl font-extrabold text-[var(--brand-${s.c})]`}>
                   {s.n}
                 </div>
                 <div className="mt-3 text-foreground font-medium">{s.l}</div>
@@ -734,28 +744,28 @@ function CTA() {
   return (
     <section className="py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="relative rounded-[2.5rem] overflow-hidden bg-gradient-brand p-10 sm:p-16 shadow-glow">
-          <div className="relative grid lg:grid-cols-2 gap-10 items-center text-white">
+        <div className="relative rounded-[2.5rem] overflow-hidden bg-white border border-border p-10 sm:p-16 shadow-card">
+          <div className="relative grid lg:grid-cols-2 gap-10 items-center text-foreground">
             <div>
               <h2 className="text-4xl sm:text-5xl font-extrabold leading-tight">
                 Build an inclusive future, together.
               </h2>
-              <p className="mt-5 text-white/85 text-lg">
+              <p className="mt-5 text-muted-foreground text-lg">
                 Partner with Torchit to scale assistive technology and accessibility programs that
                 create measurable, lasting change.
               </p>
             </div>
             <div className="space-y-4">
-              <a href="mailto:hello@torchit.in" className="flex items-center gap-4 glass rounded-2xl p-5 text-white hover:bg-white/10 hover:-translate-y-1 transition-all duration-300">
-                <Mail className="w-5 h-5" />
-                <span>hello@torchit.in</span>
+              <a href="mailto:hello@mytorchit.com" className="flex items-center gap-4 border border-border bg-secondary/50 rounded-2xl p-5 text-foreground hover:bg-secondary hover:-translate-y-1 transition-all duration-300">
+                <Mail className="w-5 h-5 text-[var(--brand-purple)]" />
+                <span>hello@mytorchit.com</span>
               </a>
-              <a href="tel:+917383635420" className="flex items-center gap-4 glass rounded-2xl p-5 text-white hover:bg-white/10 hover:-translate-y-1 transition-all duration-300">
-                <Phone className="w-5 h-5" />
+              <a href="tel:+917383635420" className="flex items-center gap-4 border border-border bg-secondary/50 rounded-2xl p-5 text-foreground hover:bg-secondary hover:-translate-y-1 transition-all duration-300">
+                <Phone className="w-5 h-5 text-[var(--brand-orange)]" />
                 <span>+91 73836 35420</span>
               </a>
-              <div className="flex items-center gap-4 glass rounded-2xl p-5 text-white hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 cursor-default">
-                <MapPin className="w-5 h-5" />
+              <div className="flex items-center gap-4 border border-border bg-secondary/50 rounded-2xl p-5 text-foreground hover:bg-secondary hover:-translate-y-1 transition-all duration-300 cursor-default">
+                <MapPin className="w-5 h-5 text-[var(--brand-blue)]" />
                 <span>Ahmedabad, India · Global delivery</span>
               </div>
             </div>
