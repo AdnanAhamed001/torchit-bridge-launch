@@ -748,7 +748,7 @@ function Index() {
         <FAQ />
         <CTA />
       </main>
-      <Footer />
+      
     </div>
   );
 }
