@@ -105,6 +105,8 @@
     font-feature-settings: "ss01", "cv11";
   }
   h1,h2,h3,h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+  html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+  .container, main, section { max-width: 100%; overflow-x: hidden; }
 }
 
 @layer utilities {
