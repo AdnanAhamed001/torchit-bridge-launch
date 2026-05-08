@@ -803,7 +803,7 @@ function CSRPage() {
         <FAQ />
         <CTA />
       </main>
-      <Footer />
+      
     </div>
   );
 }
