@@ -264,7 +264,7 @@ function About() {
           <div className="relative grid grid-cols-2 gap-4">
             <img src={distributionEvent} alt="Device distribution" className="rounded-3xl shadow-card aspect-[3/4] object-cover" loading="lazy" />
             <div className="space-y-4 mt-12">
-              <img src={jyotiRecipients} alt="Jyoti recipients" className="rounded-3xl shadow-card aspect-square object-cover" loading="lazy" />
+              <img src={jyotiRecipients} alt="Students using Jyoti AI glasses" className="rounded-3xl shadow-card aspect-square object-cover" loading="lazy" />
               <img src={ongcEvent} alt="ONGC CSR event" className="rounded-3xl shadow-card aspect-[4/3] object-cover" loading="lazy" />
             </div>
           </div>
@@ -571,51 +571,7 @@ function Education() {
   );
 }
 
-function Partners() {
-  const groups = [
-    {
-      title: "Corporate & PSU",
-      list: ["ONGC", "Oil India Limited", "HDFC Bank", "Bank of America", "Wagh Bakri", "Syngenta", "Meta", "MLM India"],
-    },
-    {
-      title: "International",
-      list: ["United Nations", "WHO", "UNESCO", "USAID", "RNIB", "IDA", "GDI Hub"],
-    },
-    {
-      title: "Academic",
-      list: ["IIT Madras", "IIT Bombay", "PDEU"],
-    },
-    {
-      title: "NGO & Disability Sector",
-      list: ["NAB", "Blind People's Association", "Enable India", "Sightsavers", "Bangladesh Protibandhi Foundation"],
-    },
-  ];
-  return (
-    <section className="py-28">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <motion.div {...fadeUp} className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-sm font-semibold text-[var(--brand-orange)] uppercase tracking-widest">Collaborators</span>
-          <h2 className="mt-3 text-4xl sm:text-5xl font-extrabold">Built with the world's leading institutions</h2>
-        </motion.div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {groups.map((g) => (
-            <div key={g.title} className="rounded-3xl border border-border p-7 bg-white shadow-sm hover:shadow-card-hover hover:-translate-y-1 hover:border-[var(--brand-blue)]/30 transition-all duration-300">
-              <h3 className="font-bold text-lg text-gradient-brand">{g.title}</h3>
-              <ul className="mt-4 space-y-2 text-sm text-foreground/80">
-                {g.list.map((n) => (
-                  <li key={n} className="flex items-center gap-2">
-                    <div className="w-1 h-1 rounded-full bg-[var(--brand-pink)]" />
-                    {n}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+
 
 function FAQ() {
   const faqs = [
@@ -738,7 +694,6 @@ function Index() {
         <Products />
         <CSR />
         <Education />
-        <Partners />
         <FAQ />
         <CTA />
       </main>

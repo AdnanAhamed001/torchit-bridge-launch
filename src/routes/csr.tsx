@@ -34,14 +34,6 @@ import jyotiRecipients from "@/assets/jyoti-recipients.jpg";
 import irctcDistribution from "@/assets/irctc-distribution.jpg";
 import studentKit from "@/assets/student-kit.jpg";
 import careKits from "@/assets/care-kits.jpg";
-import hdfc from "@/assets/partners/hdfc.png";
-import mlm from "@/assets/partners/mlm.png";
-import bofa from "@/assets/partners/bofa.png";
-import savita from "@/assets/partners/savita.png";
-import irctcLogo from "@/assets/partners/irctc.png";
-import waghbakri from "@/assets/partners/waghbakri.jpg";
-import oilindia from "@/assets/partners/oilindia.png";
-import gruh from "@/assets/partners/gruh.jpg";
 
 export const Route = createFileRoute("/csr")({
   head: () => ({
@@ -88,7 +80,7 @@ function Nav() {
                 {l}
               </Link>
             ))}
-            <a href="#partners" className="hover:text-foreground transition-colors">Partners</a>
+
             <a href="#impact" className="hover:text-foreground transition-colors">Impact</a>
             <a href="#faq" className="hover:text-foreground transition-colors">FAQ</a>
           </nav>
@@ -467,32 +459,25 @@ function Skills() {
 }
 
 function PartnerLogos() {
-  const logos = [
-    { name: "HDFC Bank", src: hdfc },
-    { name: "Bank of America", src: bofa },
-    { name: "Oil India Limited", src: oilindia },
-    { name: "IRCTC", src: irctcLogo },
-    { name: "Wagh Bakri Tea Group", src: waghbakri },
-    { name: "Savita", src: savita },
-    { name: "MLM India", src: mlm },
-    { name: "Gruh Finance", src: gruh },
-  ];
+  const modules = import.meta.glob('@/assets/partners/*.png', { eager: true });
+  const logos = Object.values(modules).map((mod: any) => mod.default as string);
+
   return (
     <section className="py-20 border-y border-border bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <p className="text-center text-xs uppercase tracking-[0.25em] text-muted-foreground mb-10">
           Trusted CSR & Partnership Collaborators
         </p>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-          {logos.map((l) => (
+        <div className="flex flex-wrap justify-center gap-5">
+          {logos.map((src, i) => (
             <div
-              key={l.name}
-              className="h-24 rounded-2xl border border-border bg-white flex items-center justify-center p-4 hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300"
+              key={i}
+              className="h-32 w-[calc(50%-0.625rem)] sm:w-[calc(25%-0.9375rem)] md:w-[calc(20%-1rem)] lg:w-[calc(14.285%-1.07rem)] shrink-0 rounded-2xl border border-border bg-white flex items-center justify-center p-3 overflow-hidden hover:shadow-card-hover hover:-translate-y-1 hover:border-[var(--brand-blue)]/30 transition-all duration-300"
             >
               <img
-                src={l.src}
-                alt={l.name}
-                className="max-h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300 opacity-80 hover:opacity-100"
+                src={src}
+                alt={`Partner ${i}`}
+                className="max-h-full max-w-full object-contain scale-110 transition-transform duration-300 hover:scale-125"
                 loading="lazy"
               />
             </div>
@@ -503,62 +488,7 @@ function PartnerLogos() {
   );
 }
 
-function Partners() {
-  const groups = [
-    {
-      title: "Corporate & PSU",
-      icon: Building2,
-      list: ["ONGC", "Oil India Limited", "HDFC Bank", "Bank of America", "Wagh Bakri Tea Group", "Syngenta", "Meta", "MLM India"],
-      c: "blue"
-    },
-    {
-      title: "International & Institutional",
-      icon: Globe,
-      list: ["United Nations", "WHO", "UNESCO", "USAID", "RNIB", "IDA", "GDI Hub"],
-      c: "orange"
-    },
-    {
-      title: "Academic & Research",
-      icon: GraduationCap,
-      list: ["IIT Madras", "IIT Bombay", "PDEU"],
-      c: "pink"
-    },
-    {
-      title: "NGO & Disability Sector",
-      icon: HandHeart,
-      list: ["National Association for the Blind (NAB)", "Blind People's Association (BPA)", "Enable India", "Sightsavers", "Bangladesh Protibandhi Foundation"],
-      c: "orange"
-    },
-  ];
-  return (
-    <section id="partners" className="py-28">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <motion.div {...fadeUp} className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-sm font-semibold text-[var(--brand-pink)] uppercase tracking-widest">Collaborators</span>
-          <h2 className="mt-3 text-4xl sm:text-5xl font-extrabold">Built with the world's leading institutions</h2>
-        </motion.div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {groups.map(({ title, icon: I, list, c }) => (
-            <div key={title} className="rounded-3xl border border-border p-7 bg-white shadow-sm hover:shadow-card-hover hover:-translate-y-1 transition-all duration-300">
-              <div className={`w-11 h-11 rounded-2xl bg-[var(--brand-${c})] text-white flex items-center justify-center mb-4`}>
-                <I className="w-5 h-5" />
-              </div>
-              <h3 className="font-bold text-lg">{title}</h3>
-              <ul className="mt-4 space-y-2 text-sm text-foreground/80">
-                {list.map((n) => (
-                  <li key={n} className="flex items-start gap-2">
-                    <div className={`w-1 h-1 rounded-full bg-[var(--brand-${c})] mt-2 shrink-0`} />
-                    <span>{n}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+
 
 function Models() {
   const models = [
@@ -800,7 +730,6 @@ function CSRPage() {
         <Education />
         <Skills />
         <PartnerLogos />
-        <Partners />
         <Models />
         <Impact />
         <Quotation />
