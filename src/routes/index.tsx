@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import {
@@ -21,6 +22,9 @@ import {
   Quote,
   Award,
   Lightbulb,
+  Search,
+  Plus,
+  Minus,
 } from "lucide-react";
 import logo from "@/assets/torchit-logo.png";
 import heroDevices from "@/assets/hero-devices.png";
@@ -30,6 +34,7 @@ import jyotiRecipients from "@/assets/jyoti-recipients.jpg";
 import irctcDistribution from "@/assets/irctc-distribution.jpg";
 import studentKit from "@/assets/student-kit.jpg";
 import careKits from "@/assets/care-kits.jpg";
+import faqCharacter from "@/assets/faq-character.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -576,58 +581,179 @@ function Education() {
 function FAQ() {
   const faqs = [
     {
-      q: "What are Torchit CSR programs?",
-      a: "Torchit CSR programs focus on assistive technology distribution, inclusive education, accessibility awareness, mobility support, and skill development for persons with disabilities.",
+      q: "What assistive technology solutions does Torchit provide?",
+      a: "Torchit develops affordable assistive technology solutions that improve accessibility, mobility, education, and independence for persons with disabilities. The company focuses on visually impaired individuals through products like Saarthi Smart Cane, Jyoti AI Smart Glasses, and the Saksharta Inclusive Education Kit. Torchit also supports inclusive classrooms, accessibility training, and assistive ecosystems through EnableMart and community initiatives.",
     },
     {
-      q: "Which assistive devices are included in Torchit CSR initiatives?",
-      a: "Programs may include the Saarthi Smart Cane, Jyoti AI Smart Glasses, Saksharta Inclusive Education Kit, accessible learning tools, and mobility aids.",
+      q: "How does Saarthi Smart Cane help visually impaired individuals?",
+      a: "Saarthi Smart Cane is a smart mobility aid that enhances a traditional white cane with ultrasonic obstacle detection and vibration feedback. It helps users detect obstacles beyond ground level, including hanging objects and barriers that standard canes may miss. The device improves navigation, confidence, and independent movement in both indoor and outdoor environments.",
     },
     {
-      q: "Can companies sponsor assistive devices through Torchit?",
-      a: "Yes. Organizations can sponsor smart canes, AI glasses, educational kits, inclusive classrooms, and accessibility programs through CSR partnerships.",
+      q: "What are Jyoti AI Smart Glasses?",
+      a: "Jyoti AI Smart Glasses are wearable assistive devices designed to improve spatial awareness and accessibility for visually impaired individuals. The system uses AI-powered features such as object recognition, scene understanding, text reading, and multilingual accessibility support. Jyoti helps users understand their surroundings more independently in daily life, education, and public spaces.",
     },
     {
-      q: "Does Torchit support inclusive education programs?",
-      a: "Yes. Torchit works with schools and organizations to build accessible classrooms, train teachers, and provide assistive learning technologies.",
+      q: "How do AI-powered accessibility solutions improve independence?",
+      a: "AI-powered accessibility solutions help users access information and environments without depending on others. Technologies such as object recognition, text-to-speech, smart navigation, and assistive sensors provide real-time support for reading, mobility, and communication. These systems improve confidence, safety, and participation in education, work, and everyday activities.",
     },
     {
-      q: "Which organizations collaborate with Torchit?",
-      a: "Torchit collaborates with corporations, NGOs, educational institutions, PSUs, and international organizations including ONGC, HDFC Bank, UNESCO, WHO, NAB, and Bank of America.",
+      q: "What is an inclusive classroom solution?",
+      a: "An inclusive classroom solution combines assistive technology, accessible learning tools, and adaptive educational systems to ensure equal learning opportunities for students with disabilities. These solutions help visually impaired students access educational content, participate independently, and interact more effectively in classroom environments.",
     },
     {
-      q: "How does assistive technology improve disability inclusion?",
-      a: "Assistive technology improves mobility, communication, education access, digital inclusion, safety, and independence for persons with disabilities.",
+      q: "How does the Saksharta Kit support accessible education?",
+      a: "The Saksharta Inclusive Education Kit supports accessible learning by combining mobility devices, AI tools, tactile learning systems, and accessible communication devices into one integrated ecosystem. The kit includes tools such as Saarthi Smart Cane, tactile keyboards, accessible smartphones, AI glasses, and assistive reading systems that help visually impaired students learn independently.",
     },
     {
-      q: "Does Torchit provide training programs for persons with disabilities?",
-      a: "Yes. Torchit conducts digital literacy, mobility, entrepreneurship, and technology training programs for persons with disabilities.",
+      q: "Are Torchit assistive devices affordable and accessible?",
+      a: "Torchit focuses on building affordable assistive technologies without compromising usability or innovation. Many accessibility devices available globally are expensive and difficult to access. Torchit develops cost-effective solutions designed specifically for real-world accessibility challenges, helping more individuals, schools, NGOs, and institutions access assistive technology.",
     },
     {
-      q: "How can organizations partner with Torchit for CSR projects?",
-      a: "Through device sponsorships, inclusive education initiatives, awareness campaigns, skill development programs, and accessibility infrastructure projects.",
+      q: "Where can Torchit accessibility solutions be used?",
+      a: "Torchit solutions are designed for multiple environments including schools, colleges, homes, workplaces, rehabilitation centers, public spaces, and inclusive classrooms. Their assistive devices support everyday mobility, communication, digital learning, and independent navigation across different use cases.",
     },
+    {
+      q: "Who can benefit from Torchit assistive technology solutions?",
+      a: "Torchit solutions are designed for visually impaired individuals, persons with disabilities, students, educators, NGOs, accessibility organizations, inclusive institutions, and caregivers. The products are suitable for both beginners and advanced users seeking greater independence and accessibility in daily life.",
+    },
+    {
+      q: "Why are inclusive assistive technologies important?",
+      a: "Inclusive assistive technologies remove barriers that prevent equal participation in education, mobility, communication, and employment. They improve independence, confidence, accessibility, and quality of life for persons with disabilities. Inclusive solutions also help create more accessible communities, workplaces, and learning environments for everyone.",
+    },
+    {
+      q: "Does Torchit support NGOs, CSR projects, and institutions?",
+      a: "Yes, Torchit actively collaborates with NGOs, schools, CSR partners, governments, and accessibility organizations to expand assistive technology access. The company works on inclusive classrooms, resource centers, device sponsorships, awareness campaigns, training programs, and accessibility initiatives that support underserved communities.",
+    },
+    {
+      q: "What makes Torchit different from other assistive technology companies?",
+      a: "Torchit combines affordability, accessibility, AI innovation, and real-world usability into one ecosystem. Their solutions are designed with direct feedback from persons with disabilities and focus on practical everyday impact. Instead of offering standalone products, Torchit builds integrated accessibility systems that support mobility, learning, communication, and independent living.",
+    }
   ];
+
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
   return (
-    <section className="py-28">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6">
-        <motion.div {...fadeUp} className="text-center mb-14">
-          <span className="text-sm font-semibold text-[var(--brand-pink)] uppercase tracking-widest">FAQ</span>
-          <h2 className="mt-3 text-4xl sm:text-5xl font-extrabold">Frequently asked questions</h2>
-        </motion.div>
-        <div className="space-y-3">
-          {faqs.map((f, i) => (
-            <details
-              key={i}
-              className="group rounded-2xl border border-border bg-white p-6 open:shadow-card transition-shadow"
-            >
-              <summary className="flex items-center justify-between cursor-pointer list-none font-semibold text-lg">
-                {f.q}
-                <ChevronDown className="w-5 h-5 text-muted-foreground group-open:rotate-180 transition-transform" />
-              </summary>
-              <p className="mt-4 text-muted-foreground leading-relaxed">{f.a}</p>
-            </details>
-          ))}
+    <section id="faq" className="relative w-full bg-[#F6A53A] pt-[60px] pb-[60px] lg:pt-[100px] lg:pb-[100px] px-[20px] md:px-[32px] lg:px-[60px] overflow-hidden flex justify-center mt-12">
+      {/* Decorative Blob Shapes */}
+      <div 
+        className="absolute bottom-[-100px] left-[-100px] w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] rounded-full bg-[#DDD5CA] blur-[100px] z-0 pointer-events-none" 
+        style={{ opacity: 0.2 }} 
+      />
+      <div 
+        className="absolute bottom-[-100px] right-[-100px] w-[300px] h-[300px] lg:w-[500px] lg:h-[500px] rounded-full bg-[#DDD5CA] blur-[100px] z-0 pointer-events-none" 
+        style={{ opacity: 0.2 }} 
+      />
+
+      {/* Main FAQ Card */}
+      <div 
+        className="relative z-10 w-full max-w-[1240px] bg-[#F7F7F7] rounded-[42px] min-h-[640px] flex flex-col"
+        style={{
+          border: "4px solid rgba(178,120,40,0.18)",
+          boxShadow: "0 20px 60px rgba(0,0,0,0.06)",
+        }}
+      >
+        <div className="p-[30px] lg:pt-[40px] lg:pb-[40px] lg:pl-[60px] lg:pr-[60px] h-full flex flex-col">
+          {/* Header Navigation Area */}
+          <div className="flex flex-col md:flex-row justify-between items-center w-full mb-12 gap-6 md:gap-0">
+            <div className="text-[14px] font-[700] tracking-[2px] text-[#E3642A] uppercase">
+              Contact Us
+            </div>
+            <nav className="flex items-center gap-6 lg:gap-8">
+              {["HOME", "ABOUT US", "BLOG", "FAQ"].map((item) => (
+                <div key={item} className="flex flex-col items-center gap-1 cursor-pointer">
+                  <span className="text-[13px] font-[500] tracking-[3px] text-[#3B3B3B] uppercase">{item}</span>
+                  {item === "FAQ" && <div className="w-[28px] h-[2px] bg-[#E4BE4B]" />}
+                </div>
+              ))}
+            </nav>
+            <div className="text-[13px] font-[700] tracking-[2px] text-[#3B3B3B] uppercase underline underline-offset-4 decoration-2">
+              HELLO, USERNAME
+            </div>
+          </div>
+
+          {/* Main Content Layout */}
+          <div className="flex flex-col lg:flex-row w-full flex-grow relative gap-12 lg:gap-0">
+            
+            {/* Left FAQ Content Area */}
+            <div className="w-full lg:w-[48%] flex flex-col relative z-[3]">
+              <h2 
+                className="text-[#40467C] font-[800] text-[48px] lg:text-[74px] leading-[1.02] tracking-[-2px] mb-[32px] max-w-[470px]"
+                style={{ fontFamily: "'Poppins', sans-serif" }}
+              >
+                Frequently Asked Questions
+              </h2>
+
+              <div className="relative w-full max-w-[430px] h-[58px] mb-[28px]">
+                <input
+                  type="text"
+                  placeholder="Search question here"
+                  className="w-full h-full bg-[#EFE9E4] rounded-full pl-[24px] pr-[54px] outline-none text-[16px] italic text-[#4B4F68] placeholder:text-[#B2B2B2]"
+                />
+                <Search className="absolute right-[22px] top-1/2 -translate-y-1/2 w-[20px] h-[20px] text-[#B8B8B8]" />
+              </div>
+
+              <div className="w-full max-w-[430px] flex flex-col">
+                {faqs.map((f, i) => {
+                  const isOpen = openIndex === i;
+                  return (
+                    <div key={i} className="flex flex-col border-b border-[#D8D8D8] overflow-hidden">
+                      <button
+                        onClick={() => setOpenIndex(isOpen ? null : i)}
+                        className="w-full flex justify-between items-center py-[20px] min-h-[62px] outline-none group cursor-pointer"
+                      >
+                        <span className="text-[17px] font-[700] text-[#4B4F68] text-left pr-4 group-hover:text-[#40467C] transition-colors">{f.q}</span>
+                        {isOpen ? (
+                          <Minus className="w-[18px] h-[18px] text-[#B7B7B7] shrink-0" />
+                        ) : (
+                          <Plus className="w-[18px] h-[18px] text-[#B7B7B7] shrink-0" />
+                        )}
+                      </button>
+                      {isOpen && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          className="pb-[20px]"
+                        >
+                          <p className="text-[15px] font-[400] leading-[1.8] text-[#A3A3A3]">
+                            {f.a}
+                          </p>
+                        </motion.div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Right Illustration Area */}
+            <div className="w-full lg:w-[52%] relative flex items-center justify-center min-h-[400px] lg:min-h-full">
+              {/* Oversized FAQ Typography */}
+              <div 
+                className="absolute text-[#E7E1D9] font-[900] text-[180px] lg:text-[260px] leading-none select-none z-[1] lg:right-[-20px] pointer-events-none"
+                style={{ opacity: 0.92, fontFamily: "'Poppins', sans-serif" }}
+              >
+                FAQ
+              </div>
+
+              {/* Character Illustration */}
+              <div className="relative z-[4] w-[200px] lg:w-[240px] flex flex-col items-center">
+                <img 
+                  src={faqCharacter} 
+                  alt="FAQ Character illustration" 
+                  className="w-full h-auto object-contain"
+                  style={{ mixBlendMode: 'multiply' }}
+                />
+                {/* Shadow under illustration */}
+                <div className="w-[200px] lg:w-[280px] h-[20px] lg:h-[30px] bg-black/10 rounded-[100%] blur-md mt-[-10px] z-[-1]" />
+              </div>
+
+              {/* Floating Question Marks */}
+              <div className="absolute top-[10%] left-[10%] lg:top-[20%] lg:left-[20%] z-[5] text-[#F1632A] font-[900] text-[42px] lg:text-[52px] rotate-[-15deg] animate-bounce" style={{ fontFamily: "'Poppins', sans-serif", animationDuration: '3s' }}>?</div>
+              <div className="absolute top-[5%] right-[15%] lg:top-[15%] lg:right-[25%] z-[5] text-[#D9D1C7] font-[900] text-[28px] lg:text-[34px] rotate-[10deg] animate-pulse" style={{ fontFamily: "'Poppins', sans-serif" }}>?</div>
+              <div className="absolute bottom-[20%] left-[5%] lg:bottom-[30%] lg:left-[10%] z-[5] text-[#D9D1C7] font-[900] text-[32px] lg:text-[42px] rotate-[-5deg] animate-float" style={{ fontFamily: "'Poppins', sans-serif" }}>?</div>
+              <div className="absolute bottom-[10%] right-[10%] lg:bottom-[20%] lg:right-[15%] z-[5] text-[#F1632A] font-[900] text-[20px] lg:text-[24px] rotate-[20deg]" style={{ fontFamily: "'Poppins', sans-serif" }}>?</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

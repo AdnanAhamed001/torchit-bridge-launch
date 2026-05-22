@@ -1,0 +1,885 @@
+{
+  "version": "0.4",
+  "title": "Torchit Challenge Section",
+  "type": "section",
+  "content": [
+    {
+      "id": "e23jm1u",
+      "elType": "section",
+      "settings": {
+        "layout": "boxed",
+        "content_width": {
+          "unit": "px",
+          "size": 1400
+        },
+        "padding": {
+          "unit": "px",
+          "top": "120",
+          "right": "20",
+          "bottom": "120",
+          "left": "20",
+          "isLinked": false
+        },
+        "padding_tablet": {
+          "unit": "px",
+          "top": "80",
+          "right": "20",
+          "bottom": "80",
+          "left": "20",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "60",
+          "right": "20",
+          "bottom": "60",
+          "left": "20",
+          "isLinked": false
+        },
+        "background_background": "classic",
+        "background_color": "#FFFFFF"
+      },
+      "elements": [
+        {
+          "id": "33k0tea",
+          "elType": "column",
+          "settings": {
+            "_column_size": 100
+          },
+          "elements": [
+            {
+              "id": "1b181qo",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "DAILY CHALLENGES",
+                "title_color": "#FF7A45",
+                "typography_typography": "custom",
+                "typography_font_family": "Inter",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 14
+                },
+                "typography_font_weight": "700",
+                "typography_transform": "uppercase",
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 1
+                },
+                "align": "center",
+                "margin": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "16",
+                  "left": "0",
+                  "isLinked": false
+                }
+              }
+            },
+            {
+              "id": "w8vih9v",
+              "elType": "widget",
+              "widgetType": "heading",
+              "settings": {
+                "title": "Everyday Tasks Can Become Significant Barriers",
+                "header_size": "h2",
+                "title_color": "#111827",
+                "typography_typography": "custom",
+                "typography_font_family": "Inter",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 58
+                },
+                "typography_font_size_tablet": {
+                  "unit": "px",
+                  "size": 48
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 36
+                },
+                "typography_font_weight": "700",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.1
+                },
+                "align": "center",
+                "margin": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "24",
+                  "left": "0",
+                  "isLinked": false
+                }
+              }
+            },
+            {
+              "id": "mmblkt0",
+              "elType": "widget",
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "People with low vision often encounter challenges that affect education, employment, mobility, and independence.",
+                "text_color": "#64748B",
+                "typography_typography": "custom",
+                "typography_font_family": "Inter",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 20
+                },
+                "typography_font_size_tablet": {
+                  "unit": "px",
+                  "size": 18
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 16
+                },
+                "align": "center",
+                "margin": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "60",
+                  "left": "0",
+                  "isLinked": false
+                }
+              }
+            },
+            {
+              "id": "4ipn4cb",
+              "elType": "section",
+              "isInner": true,
+              "settings": {
+                "gap": "extended",
+                "margin": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "32",
+                  "left": "0",
+                  "isLinked": false
+                }
+              },
+              "elements": [
+                {
+                  "id": "gvt97ld",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 33,
+                    "_column_size_tablet": 50,
+                    "_column_size_mobile": 100,
+                    "background_background": "classic",
+                    "background_color": "#F7FAFC",
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "top": 1,
+                      "right": 1,
+                      "bottom": 1,
+                      "left": 1,
+                      "isLinked": true
+                    },
+                    "border_color": "#EDF2F7",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": 32,
+                      "right": 32,
+                      "bottom": 32,
+                      "left": 32,
+                      "isLinked": true
+                    },
+                    "box_shadow_box_shadow_type": "yes",
+                    "box_shadow_box_shadow": {
+                      "horizontal": 0,
+                      "vertical": 12,
+                      "blur": 45,
+                      "spread": 0,
+                      "color": "rgba(15,23,42,0.08)"
+                    },
+                    "overflow": "hidden",
+                    "padding": {
+                      "unit": "px",
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0,
+                      "isLinked": true
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "s30r44b",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "settings": {
+                        "image": {
+                          "url": "https://via.placeholder.com/600x400"
+                        },
+                        "margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": true
+                        }
+                      }
+                    },
+                    {
+                      "id": "4x5vac2",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Reading Printed Information",
+                        "title_color": "#111827",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 24
+                        },
+                        "typography_font_weight": "700",
+                        "margin": {
+                          "unit": "px",
+                          "top": "24",
+                          "right": "32",
+                          "bottom": "12",
+                          "left": "32",
+                          "isLinked": false
+                        }
+                      }
+                    },
+                    {
+                      "id": "xhwbaxn",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "Reading textbooks, medicine labels, menus, receipts, or forms may become difficult because of reduced clarity or limited field of vision.",
+                        "text_color": "#64748B",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16
+                        },
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.6
+                        },
+                        "margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "32",
+                          "bottom": "32",
+                          "left": "32",
+                          "isLinked": false
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "buey80t",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 33,
+                    "_column_size_tablet": 50,
+                    "_column_size_mobile": 100,
+                    "background_background": "classic",
+                    "background_color": "#F7FAFC",
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "top": 1,
+                      "right": 1,
+                      "bottom": 1,
+                      "left": 1,
+                      "isLinked": true
+                    },
+                    "border_color": "#EDF2F7",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": 32,
+                      "right": 32,
+                      "bottom": 32,
+                      "left": 32,
+                      "isLinked": true
+                    },
+                    "box_shadow_box_shadow_type": "yes",
+                    "box_shadow_box_shadow": {
+                      "horizontal": 0,
+                      "vertical": 12,
+                      "blur": 45,
+                      "spread": 0,
+                      "color": "rgba(15,23,42,0.08)"
+                    },
+                    "overflow": "hidden",
+                    "padding": {
+                      "unit": "px",
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0,
+                      "isLinked": true
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "4nc44dn",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "settings": {
+                        "image": {
+                          "url": "https://via.placeholder.com/600x400"
+                        },
+                        "margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": true
+                        }
+                      }
+                    },
+                    {
+                      "id": "nnej3da",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Identifying Distant Information",
+                        "title_color": "#111827",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 24
+                        },
+                        "typography_font_weight": "700",
+                        "margin": {
+                          "unit": "px",
+                          "top": "24",
+                          "right": "32",
+                          "bottom": "12",
+                          "left": "32",
+                          "isLinked": false
+                        }
+                      }
+                    },
+                    {
+                      "id": "crhh0ar",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "Bus numbers, classroom boards, street signs, digital displays, and public information boards may be hard to recognize.",
+                        "text_color": "#64748B",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16
+                        },
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.6
+                        },
+                        "margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "32",
+                          "bottom": "32",
+                          "left": "32",
+                          "isLinked": false
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "t325yq5",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 33,
+                    "_column_size_tablet": 50,
+                    "_column_size_mobile": 100,
+                    "background_background": "classic",
+                    "background_color": "#F7FAFC",
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "top": 1,
+                      "right": 1,
+                      "bottom": 1,
+                      "left": 1,
+                      "isLinked": true
+                    },
+                    "border_color": "#EDF2F7",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": 32,
+                      "right": 32,
+                      "bottom": 32,
+                      "left": 32,
+                      "isLinked": true
+                    },
+                    "box_shadow_box_shadow_type": "yes",
+                    "box_shadow_box_shadow": {
+                      "horizontal": 0,
+                      "vertical": 12,
+                      "blur": 45,
+                      "spread": 0,
+                      "color": "rgba(15,23,42,0.08)"
+                    },
+                    "overflow": "hidden",
+                    "padding": {
+                      "unit": "px",
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0,
+                      "isLinked": true
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "j2qimyk",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "settings": {
+                        "image": {
+                          "url": "https://via.placeholder.com/600x400"
+                        },
+                        "margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": true
+                        }
+                      }
+                    },
+                    {
+                      "id": "i1al1r3",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Digital Accessibility",
+                        "title_color": "#111827",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 24
+                        },
+                        "typography_font_weight": "700",
+                        "margin": {
+                          "unit": "px",
+                          "top": "24",
+                          "right": "32",
+                          "bottom": "12",
+                          "left": "32",
+                          "isLinked": false
+                        }
+                      }
+                    },
+                    {
+                      "id": "d94opdk",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "Computers, smartphones, websites, and interfaces can become difficult to use without magnification tools or accessibility adaptations.",
+                        "text_color": "#64748B",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16
+                        },
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.6
+                        },
+                        "margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "32",
+                          "bottom": "32",
+                          "left": "32",
+                          "isLinked": false
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "42c9mrl",
+              "elType": "section",
+              "isInner": true,
+              "settings": {
+                "gap": "extended"
+              },
+              "elements": [
+                {
+                  "id": "qla3d0l",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 33,
+                    "_column_size_tablet": 50,
+                    "_column_size_mobile": 100,
+                    "background_background": "classic",
+                    "background_color": "#F7FAFC",
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "top": 1,
+                      "right": 1,
+                      "bottom": 1,
+                      "left": 1,
+                      "isLinked": true
+                    },
+                    "border_color": "#EDF2F7",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": 32,
+                      "right": 32,
+                      "bottom": 32,
+                      "left": 32,
+                      "isLinked": true
+                    },
+                    "box_shadow_box_shadow_type": "yes",
+                    "box_shadow_box_shadow": {
+                      "horizontal": 0,
+                      "vertical": 12,
+                      "blur": 45,
+                      "spread": 0,
+                      "color": "rgba(15,23,42,0.08)"
+                    },
+                    "overflow": "hidden",
+                    "padding": {
+                      "unit": "px",
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0,
+                      "isLinked": true
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "aony7hn",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "settings": {
+                        "image": {
+                          "url": "https://via.placeholder.com/600x400"
+                        },
+                        "margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": true
+                        }
+                      }
+                    },
+                    {
+                      "id": "n8jbnkx",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Education Accessibility",
+                        "title_color": "#111827",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 24
+                        },
+                        "typography_font_weight": "700",
+                        "margin": {
+                          "unit": "px",
+                          "top": "24",
+                          "right": "32",
+                          "bottom": "12",
+                          "left": "32",
+                          "isLinked": false
+                        }
+                      }
+                    },
+                    {
+                      "id": "twtl9lw",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "Students with low vision often require accessible learning tools to participate equally in classrooms.",
+                        "text_color": "#64748B",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16
+                        },
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.6
+                        },
+                        "margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "32",
+                          "bottom": "32",
+                          "left": "32",
+                          "isLinked": false
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "g972llg",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 33,
+                    "_column_size_tablet": 50,
+                    "_column_size_mobile": 100,
+                    "background_background": "classic",
+                    "background_color": "#F7FAFC",
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "top": 1,
+                      "right": 1,
+                      "bottom": 1,
+                      "left": 1,
+                      "isLinked": true
+                    },
+                    "border_color": "#EDF2F7",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": 32,
+                      "right": 32,
+                      "bottom": 32,
+                      "left": 32,
+                      "isLinked": true
+                    },
+                    "box_shadow_box_shadow_type": "yes",
+                    "box_shadow_box_shadow": {
+                      "horizontal": 0,
+                      "vertical": 12,
+                      "blur": 45,
+                      "spread": 0,
+                      "color": "rgba(15,23,42,0.08)"
+                    },
+                    "overflow": "hidden",
+                    "padding": {
+                      "unit": "px",
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0,
+                      "isLinked": true
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "w6trjjq",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "settings": {
+                        "image": {
+                          "url": "https://via.placeholder.com/600x400"
+                        },
+                        "margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": true
+                        }
+                      }
+                    },
+                    {
+                      "id": "2car4lt",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Independent Navigation",
+                        "title_color": "#111827",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 24
+                        },
+                        "typography_font_weight": "700",
+                        "margin": {
+                          "unit": "px",
+                          "top": "24",
+                          "right": "32",
+                          "bottom": "12",
+                          "left": "32",
+                          "isLinked": false
+                        }
+                      }
+                    },
+                    {
+                      "id": "ydzs0eq",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "Moving safely through unfamiliar environments may become challenging when visual details are difficult to detect.",
+                        "text_color": "#64748B",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16
+                        },
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.6
+                        },
+                        "margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "32",
+                          "bottom": "32",
+                          "left": "32",
+                          "isLinked": false
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "0ckxdc0",
+                  "elType": "column",
+                  "settings": {
+                    "_column_size": 33,
+                    "_column_size_tablet": 50,
+                    "_column_size_mobile": 100,
+                    "background_background": "classic",
+                    "background_color": "#F7FAFC",
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "top": 1,
+                      "right": 1,
+                      "bottom": 1,
+                      "left": 1,
+                      "isLinked": true
+                    },
+                    "border_color": "#EDF2F7",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": 32,
+                      "right": 32,
+                      "bottom": 32,
+                      "left": 32,
+                      "isLinked": true
+                    },
+                    "box_shadow_box_shadow_type": "yes",
+                    "box_shadow_box_shadow": {
+                      "horizontal": 0,
+                      "vertical": 12,
+                      "blur": 45,
+                      "spread": 0,
+                      "color": "rgba(15,23,42,0.08)"
+                    },
+                    "overflow": "hidden",
+                    "padding": {
+                      "unit": "px",
+                      "top": 0,
+                      "right": 0,
+                      "bottom": 0,
+                      "left": 0,
+                      "isLinked": true
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "k3ci8bp",
+                      "elType": "widget",
+                      "widgetType": "image",
+                      "settings": {
+                        "image": {
+                          "url": "https://via.placeholder.com/600x400"
+                        },
+                        "margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": true
+                        }
+                      }
+                    },
+                    {
+                      "id": "zy56krs",
+                      "elType": "widget",
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Everyday Independence",
+                        "title_color": "#111827",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 24
+                        },
+                        "typography_font_weight": "700",
+                        "margin": {
+                          "unit": "px",
+                          "top": "24",
+                          "right": "32",
+                          "bottom": "12",
+                          "left": "32",
+                          "isLinked": false
+                        }
+                      }
+                    },
+                    {
+                      "id": "pue5xr7",
+                      "elType": "widget",
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "Daily tasks like shopping, identifying products, recognizing currency, or locating personal belongings may require additional support.",
+                        "text_color": "#64748B",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Inter",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16
+                        },
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.6
+                        },
+                        "margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "32",
+                          "bottom": "32",
+                          "left": "32",
+                          "isLinked": false
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -9,9 +9,15 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as LowVisionSolutionsRouteImport } from './routes/low-vision-solutions'
 import { Route as CsrRouteImport } from './routes/csr'
 import { Route as IndexRouteImport } from './routes/index'
 
+const LowVisionSolutionsRoute = LowVisionSolutionsRouteImport.update({
+  id: '/low-vision-solutions',
+  path: '/low-vision-solutions',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CsrRoute = CsrRouteImport.update({
   id: '/csr',
   path: '/csr',
@@ -26,31 +32,42 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/csr': typeof CsrRoute
+  '/low-vision-solutions': typeof LowVisionSolutionsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/csr': typeof CsrRoute
+  '/low-vision-solutions': typeof LowVisionSolutionsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/csr': typeof CsrRoute
+  '/low-vision-solutions': typeof LowVisionSolutionsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/csr'
+  fullPaths: '/' | '/csr' | '/low-vision-solutions'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/csr'
-  id: '__root__' | '/' | '/csr'
+  to: '/' | '/csr' | '/low-vision-solutions'
+  id: '__root__' | '/' | '/csr' | '/low-vision-solutions'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CsrRoute: typeof CsrRoute
+  LowVisionSolutionsRoute: typeof LowVisionSolutionsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/low-vision-solutions': {
+      id: '/low-vision-solutions'
+      path: '/low-vision-solutions'
+      fullPath: '/low-vision-solutions'
+      preLoaderRoute: typeof LowVisionSolutionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/csr': {
       id: '/csr'
       path: '/csr'
@@ -71,6 +88,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CsrRoute: CsrRoute,
+  LowVisionSolutionsRoute: LowVisionSolutionsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
