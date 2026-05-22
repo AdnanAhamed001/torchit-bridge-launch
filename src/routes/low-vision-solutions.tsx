@@ -10,51 +10,51 @@ import {
 import logo from "@/assets/torchit-logo.png";
 
 // --- Image Imports ---
-import imgMainHero from "@/assets/Low Vision/ChatGPT Image May 22, 2026, 08_32_56 PM.png";
-import imgVideoMag2 from "@/assets/Low Vision/Video-Magnifier-2.webp";
-import imgHandHeld7 from "@/assets/Low Vision/hand-held7.webp";
-import imgLamp21 from "@/assets/Low Vision/lamp2-1.webp";
-import imgVideoMag11 from "@/assets/Low Vision/Video-Magnifier-1-1.webp";
+import imgMainHero from "@/assets/low-vision/hero-section-image.png";
+import imgVideoMag2 from "@/assets/low-vision/video-magnifier-2.webp";
+import imgHandHeld7 from "@/assets/low-vision/hand-held7.webp";
+import imgLamp21 from "@/assets/low-vision/lamp2-1.webp";
+import imgVideoMag11 from "@/assets/low-vision/video-magnifier-1-1.webp";
 
-import imgHersoo from "@/assets/Low Vision/Hersoo sectio image.jpg";
-import imgDistanceVision from "@/assets/Low Vision/distance_vision_challenge_1779464999360.png";
-import imgMedicineId from "@/assets/Low Vision/medicine_identification_1779465016373.png";
-import imgGrocery from "@/assets/Low Vision/Grocery.png";
-import imgBus from "@/assets/Low Vision/Bus.png";
-import imgMoving from "@/assets/Low Vision/moving.png";
-import imgMedicineLabel from "@/assets/Low Vision/Medicine label.png";
-import imgDigitalProblem from "@/assets/Low Vision/digital problrm.png";
-import imgStudy from "@/assets/Low Vision/study.png";
-import imgHeroSectionImage from "@/assets/Low Vision/Hero section image.png";
-import imgTech1 from "@/assets/Low Vision/tech1.png";
-import imgVideoReader from "@/assets/Low Vision/video reader.png";
-import imgWorkspaceJyoti from "@/assets/Low Vision/workspace jyoti.png";
-import imgFaqFinal from "@/assets/Low Vision/FAQ-final.png";
-import imgFaqMain from "@/assets/Low Vision/faq_main_illustration_1779465048173.png";
-import imgFaqMag from "@/assets/Low Vision/faq_float_mag_1779465063892.png";
-import imgFaqHandheld from "@/assets/Low Vision/faq_float_handheld_1779465077336.png";
-import imgCtaLamp from "@/assets/Low Vision/cta_float_lamp_1779465092296.png";
-import imgCtaMonocular from "@/assets/Low Vision/cta_float_monocular_1779465117604.png";
-import imgCtaKeyboard from "@/assets/Low Vision/cta_float_keyboard_1779465132101.png";
+import imgHersoo from "@/assets/low-vision/hersoo-sectio-image.jpg";
+import imgDistanceVision from "@/assets/low-vision/distance-vision-challenge-1779464999360.png";
+import imgMedicineId from "@/assets/low-vision/medicine-identification-1779465016373.png";
+import imgGrocery from "@/assets/low-vision/grocery.png";
+import imgBus from "@/assets/low-vision/bus.png";
+import imgMoving from "@/assets/low-vision/moving.png";
+import imgMedicineLabel from "@/assets/low-vision/medicine-label.png";
+import imgDigitalProblem from "@/assets/low-vision/digital-problrm.png";
+import imgStudy from "@/assets/low-vision/study.png";
+import imgHeroSectionImage from "@/assets/low-vision/hero-section-image.png";
+import imgTech1 from "@/assets/low-vision/tech1.png";
+import imgVideoReader from "@/assets/low-vision/video-reader.png";
+import imgWorkspaceJyoti from "@/assets/low-vision/workspace-jyoti.png";
+import imgFaqFinal from "@/assets/low-vision/faq-final.png";
+import imgFaqMain from "@/assets/low-vision/faq-main-illustration-1779465048173.png";
+import imgFaqMag from "@/assets/low-vision/faq-float-mag-1779465063892.png";
+import imgFaqHandheld from "@/assets/low-vision/faq-float-handheld-1779465077336.png";
+import imgCtaLamp from "@/assets/low-vision/cta-float-lamp-1779465092296.png";
+import imgCtaMonocular from "@/assets/low-vision/cta-float-monocular-1779465117604.png";
+import imgCtaKeyboard from "@/assets/low-vision/cta-float-keyboard-1779465132101.png";
 
-import imgMonocular1 from "@/assets/Low Vision/monocular1.webp";
-import imgDownload from "@/assets/Low Vision/download.webp";
-import imgMiscEnablemart13 from "@/assets/Low Vision/misc.-enablemart-1-3.webp";
+import imgMonocular1 from "@/assets/low-vision/monocular1.webp";
+import imgDownload from "@/assets/low-vision/download.webp";
+import imgMiscEnablemart13 from "@/assets/low-vision/misc-enablemart-1-3.webp";
 
-import imgVideoMagnifierNew from "@/assets/Low Vision/Video Magnifier.webp";
+import imgVideoMagnifierNew from "@/assets/low-vision/video-magnifier.webp";
 
-import img281 from "@/assets/Low Vision/2-8-1.webp";
-import imgJyotiProNew from "@/assets/Low Vision/Jyoti Ai Pro.webp";
-import imgJyotiAiReaderNew from "@/assets/Low Vision/Jyoti Ai reader.webp";
-import imgMiscEnablemart1 from "@/assets/Low Vision/misc.-enablemart-1.webp";
-import imgEducationAccess from "@/assets/Low Vision/education_accessibility.png";
-import imgNavigation from "@/assets/Low Vision/independent_navigation.png";
-import imgNavigationNew from "@/assets/Low Vision/independent_navigation_new.png";
-import imgJyotiSmartGlasses from "@/assets/Low Vision/Jyoti AI smart Eye Glasses.webp";
-import imgStudentSupport from "@/assets/Low Vision/student_support.png";
-import imgStudentSupportNew from "@/assets/Low Vision/student_support_new.png";
-import imgWorkplaceAccess from "@/assets/Low Vision/workplace_accessibility_new.png";
-import imgAssistiveTechLifestyle from "@/assets/Low Vision/assistive_tech_lifestyle.png";
+import img281 from "@/assets/low-vision/2-8-1.webp";
+import imgJyotiProNew from "@/assets/low-vision/jyoti-ai-pro.webp";
+import imgJyotiAiReaderNew from "@/assets/low-vision/jyoti-ai-reader.webp";
+import imgMiscEnablemart1 from "@/assets/low-vision/misc-enablemart-1.webp";
+import imgEducationAccess from "@/assets/low-vision/education-accessibility.png";
+import imgNavigation from "@/assets/low-vision/independent-navigation.png";
+import imgNavigationNew from "@/assets/low-vision/independent-navigation-new.png";
+import imgJyotiSmartGlasses from "@/assets/low-vision/jyoti-ai-smart-eye-glasses.webp";
+import imgStudentSupport from "@/assets/low-vision/student-support.png";
+import imgStudentSupportNew from "@/assets/low-vision/student-support-new.png";
+import imgWorkplaceAccess from "@/assets/low-vision/workplace-accessibility-new.png";
+import imgAssistiveTechLifestyle from "@/assets/low-vision/assistive-tech-lifestyle.png";
 
 export const Route = createFileRoute("/low-vision-solutions")({
   head: () => ({
