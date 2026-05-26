@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as LowVisionSolutionsRouteImport } from './routes/low-vision-solutions'
 import { Route as CsrRouteImport } from './routes/csr'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
 const LowVisionSolutionsRoute = LowVisionSolutionsRouteImport.update({
@@ -23,6 +24,11 @@ const CsrRoute = CsrRouteImport.update({
   path: '/csr',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -31,30 +37,34 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/csr': typeof CsrRoute
   '/low-vision-solutions': typeof LowVisionSolutionsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/csr': typeof CsrRoute
   '/low-vision-solutions': typeof LowVisionSolutionsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/csr': typeof CsrRoute
   '/low-vision-solutions': typeof LowVisionSolutionsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/csr' | '/low-vision-solutions'
+  fullPaths: '/' | '/about' | '/csr' | '/low-vision-solutions'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/csr' | '/low-vision-solutions'
-  id: '__root__' | '/' | '/csr' | '/low-vision-solutions'
+  to: '/' | '/about' | '/csr' | '/low-vision-solutions'
+  id: '__root__' | '/' | '/about' | '/csr' | '/low-vision-solutions'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
   CsrRoute: typeof CsrRoute
   LowVisionSolutionsRoute: typeof LowVisionSolutionsRoute
 }
@@ -75,6 +85,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CsrRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -87,6 +104,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
   CsrRoute: CsrRoute,
   LowVisionSolutionsRoute: LowVisionSolutionsRoute,
 }

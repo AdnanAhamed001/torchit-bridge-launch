@@ -1,5 +1,6 @@
-@import "tailwindcss" source(none);
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap');
+@import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
 
@@ -134,4 +135,25 @@
     50% { transform: translateY(-18px); }
   }
   .animate-float { animation: float-slow 6s ease-in-out infinite; }
+
+  @keyframes count-up {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-count-up { animation: count-up 0.5s ease-out forwards; }
+  
+  .grayscale-hover-color {
+    filter: grayscale(100%);
+    transition: filter 0.5s ease, transform 0.5s ease;
+  }
+  .grayscale-hover-color:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+  }
+
+  .text-gradient-gold {
+    background: linear-gradient(to right, #D9B66B, #F8E3B6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
