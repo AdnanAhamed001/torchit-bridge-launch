@@ -14,20 +14,20 @@ import {
 } from "lucide-react";
 import teamImage from "@/assets/ongc-event.jpg";
 import mapPlaceholder from "@/assets/irctc-distribution.jpg";
-import internationalImg from "@/assets/leadership page/international.jpeg";
+import internationalImg from "@/assets/leadership-page/international.jpeg";
 
-import digantImg from "@/assets/leadership page/Digant.png";
-import dineshImg from "@/assets/leadership page/Dinesh.png";
-import drBhushanImg from "@/assets/leadership page/Dr Bhushan.png";
-import drHomiImg from "@/assets/leadership page/Dr. Homiyar Mobedji.png";
-import drRitaImg from "@/assets/leadership page/Dr Rita Poptani.png";
-import hunnyImg from "@/assets/leadership page/Hunny.png";
-import hunny1Img from "@/assets/leadership page/Hunny 1.jpg";
-import mrAshishImg from "@/assets/leadership page/Mr Ashish.png";
-import mrsGitaImg from "@/assets/leadership page/Mrs Gita.png";
-import nirmalImg from "@/assets/leadership page/Nirmal.png";
-import premImg from "@/assets/leadership page/Prem.png";
-import mrKelanImg from "@/assets/leadership page/mr Kelan Dosh.png";
+import digantImg from "@/assets/leadership-page/Digant.png";
+import dineshImg from "@/assets/leadership-page/Dinesh.png";
+import drBhushanImg from "@/assets/leadership-page/Dr-Bhushan.png";
+import drHomiImg from "@/assets/leadership-page/Dr.-Homiyar-Mobedji.png";
+import drRitaImg from "@/assets/leadership-page/Dr-Rita-Poptani.png";
+import hunnyImg from "@/assets/leadership-page/Hunny.png";
+import hunny1Img from "@/assets/leadership-page/Hunny-1.jpg";
+import mrAshishImg from "@/assets/leadership-page/Mr-Ashish.png";
+import mrsGitaImg from "@/assets/leadership-page/Mrs-Gita.png";
+import nirmalImg from "@/assets/leadership-page/Nirmal.png";
+import premImg from "@/assets/leadership-page/Prem.png";
+import mrKelanImg from "@/assets/leadership-page/mr-Kelan-Dosh.png";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -330,7 +330,7 @@ function LeadershipTeam() {
     { name: "Prem Katar", title: "Head – EnableMart", bio: "10+ years in accessibility ecosystem development, outreach, and inclusive distribution. Driving last-mile accessibility.", img: premImg },
     { name: "Dinesh Bahal", title: "Head – Partnerships", bio: "25+ years of leadership experience across strategic partnerships, business development, and ecosystem building.", img: dineshImg },
     { name: "Dr Rita Poptani", title: "Leadership / Strategy", bio: "Focused on organizational growth, execution excellence, and people-first systems.", img: drRitaImg },
-    { name: "Dr. Homi R. Mobedji", title: "Research & Accessibility Advisor", bio: "Global accessibility expert with deep experience in print disability inclusion, accessible education, and assistive ecosystems.", img: drHomiImg },
+    { name: "Dr. Homiyar Mobedji", title: "Research & Accessibility Advisor", bio: "Global accessibility expert with deep experience in print disability inclusion, accessible education, and assistive ecosystems.", img: drHomiImg },
     { name: "Nirmal Pillai", title: "Business Development", bio: "14+ years of experience in public sector partnerships and institutional engagement. Helping scale impact through government collaboration.", img: nirmalImg },
     { name: "Digant Darji", title: "Head – Operations", bio: "12+ years in operations, execution, and delivery systems. Ensuring innovation reaches communities reliably and efficiently.", img: digantImg },
   ];
