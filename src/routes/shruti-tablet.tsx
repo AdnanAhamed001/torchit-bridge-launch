@@ -88,7 +88,7 @@ function ShrutiTabletPage() {
               </FadeIn>
               
               <FadeIn delay={0.1}>
-                <h1 className="text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-[1.1] text-[#071B4D]" style={{ fontFamily: 'Satoshi, sans-serif' }}>
+                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-[1.1] text-[#071B4D]" style={{ fontFamily: 'Satoshi, sans-serif' }}>
                   Every Word.<br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2A7FFF] to-[#FF4F95]">Every Sign.</span><br />
                   Every Voice Matters.
@@ -129,13 +129,13 @@ function ShrutiTabletPage() {
               <motion.div
                 animate={{ y: [-15, 15, -15] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="relative z-10 w-full max-w-lg"
+                className="relative z-10 w-full max-w-sm mx-auto"
               >
                 {/* Glow behind product */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#2A7FFF] to-[#FF4F95] opacity-20 blur-[80px] rounded-full scale-90" />
                 
                 {/* Main Product Render */}
-                <img src={img4} alt="Shruti Tablet" className="relative z-10 w-full object-contain drop-shadow-2xl scale-110" />
+                <img src={img4} alt="Shruti Tablet" className="relative z-10 w-full object-contain drop-shadow-2xl" />
 
                 {/* Floating UI Elements */}
                 <motion.div 
@@ -203,7 +203,7 @@ function ShrutiTabletPage() {
               </FadeIn>
             </div>
             
-            <div className="grid grid-cols-2 gap-6 relative">
+            <div className="grid grid-cols-2 gap-3 sm:gap-6 relative">
                {/* Decorative connecting lines */}
                <svg className="absolute inset-0 w-full h-full text-white/10" pointerEvents="none">
                   <path d="M50 50 Q 150 150 250 50 T 450 150" fill="none" stroke="currentColor" strokeWidth="2" strokeDasharray="5,5" className="animate-pulse" />
@@ -216,12 +216,12 @@ function ShrutiTabletPage() {
                 { metric: "100%", label: "Inclusive Tech", color: "#FF8748", icon: Heart },
               ].map((stat, i) => (
                 <FadeIn key={i} delay={0.1 * i}>
-                  <div className="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 transition-colors duration-300 group">
-                    <stat.icon className="h-8 w-8 mb-6" style={{ color: stat.color }} />
-                    <div className="text-4xl font-bold mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif", color: stat.color }}>
+                  <div className="p-4 sm:p-8 rounded-[1.5rem] sm:rounded-3xl bg-white/5 border border-white/10 backdrop-blur-md hover:bg-white/10 transition-colors duration-300 group">
+                    <stat.icon className="h-6 w-6 sm:h-8 sm:w-8 mb-4 sm:mb-6" style={{ color: stat.color }} />
+                    <div className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2" style={{ fontFamily: "'Space Grotesk', sans-serif", color: stat.color }}>
                       {stat.metric}
                     </div>
-                    <div className="text-lg font-medium text-white/80">{stat.label}</div>
+                    <div className="text-xs sm:text-lg font-medium text-white/80">{stat.label}</div>
                   </div>
                 </FadeIn>
               ))}
@@ -304,9 +304,9 @@ function ShrutiTabletPage() {
                 <Brain className="h-12 w-12 text-[#2A7FFF] mb-6" />
                 <h3 className="text-3xl font-bold text-[#071B4D] mb-4">AI-Based ISL Assistance</h3>
                 <p className="text-[#071B4D]/70 text-lg max-w-md relative z-10">Real-time Indian Sign Language translation powered by advanced neural networks and computer vision.</p>
-                <div className="mt-8 flex gap-4">
-                  <div className="px-4 py-2 rounded-full bg-[#071B4D]/5 text-sm font-semibold">Real-time</div>
-                  <div className="px-4 py-2 rounded-full bg-[#071B4D]/5 text-sm font-semibold">90% Accuracy</div>
+                <div className="mt-8 flex flex-wrap gap-4">
+                  <div className="px-4 py-2 rounded-full bg-[#071B4D]/5 text-sm font-semibold whitespace-nowrap">Real-time</div>
+                  <div className="px-4 py-2 rounded-full bg-[#071B4D]/5 text-sm font-semibold whitespace-nowrap">90% Accuracy</div>
                 </div>
               </div>
             </FadeIn>
@@ -384,7 +384,7 @@ function ShrutiTabletPage() {
                 <motion.img 
                   src={img1} 
                   alt="Shruti Tablet Specifications" 
-                  className="relative z-10 w-full max-w-md drop-shadow-2xl"
+                  className="relative z-10 w-full max-w-sm drop-shadow-2xl"
                   animate={{ y: [-10, 10, -10] }}
                   transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
                 />
@@ -412,7 +412,7 @@ function ShrutiTabletPage() {
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <div className="w-full h-[350px] rounded-[2.5rem] overflow-hidden mb-16 shadow-xl relative border border-[#071B4D]/10">
+            <div className="w-full h-[250px] lg:h-[280px] rounded-[2.5rem] overflow-hidden mb-16 shadow-xl relative border border-[#071B4D]/10">
               <div className="absolute inset-0 bg-gradient-to-t from-[#071B4D]/60 via-transparent to-transparent z-10 pointer-events-none" />
               <img src={img5} alt="Using Shruti Tablet" className="w-full h-full object-cover object-center" />
               <div className="absolute bottom-10 left-10 z-20 text-white">
@@ -449,7 +449,7 @@ function ShrutiTabletPage() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <FadeIn>
-              <div className="relative">
+              <div className="relative max-w-sm mx-auto lg:max-w-md">
                 <div className="absolute -inset-4 bg-gradient-to-r from-[#2A7FFF]/10 to-[#FF4F95]/10 blur-2xl rounded-[3rem] -z-10" />
                 <img src={img6} alt="Shruti Tablet Benefits" className="w-full rounded-[2rem] mix-blend-multiply" />
               </div>
