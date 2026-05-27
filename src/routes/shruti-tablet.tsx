@@ -125,11 +125,11 @@ function ShrutiTabletPage() {
             </div>
 
             {/* Right Content - Product Showcase */}
-            <div className="relative lg:h-[800px] flex items-center justify-center">
+            <div className="relative flex items-center justify-center lg:mt-0 mt-8">
               <motion.div
                 animate={{ y: [-15, 15, -15] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="relative z-10 w-full max-w-sm mx-auto"
+                className="relative z-10 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl mx-auto"
               >
                 {/* Glow behind product */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#2A7FFF] to-[#FF4F95] opacity-20 blur-[80px] rounded-full scale-90" />
@@ -189,7 +189,7 @@ function ShrutiTabletPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <FadeIn>
-                <h2 className="text-5xl lg:text-6xl font-bold mb-8 leading-tight" style={{ fontFamily: 'Satoshi, sans-serif' }}>
+                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-tight" style={{ fontFamily: 'Satoshi, sans-serif' }}>
                   Communication Should Never Be A Barrier.
                 </h2>
               </FadeIn>
@@ -235,7 +235,7 @@ function ShrutiTabletPage() {
         <div className="container mx-auto px-6 text-center max-w-5xl">
           <FadeIn>
             <div className="text-[#2A7FFF] font-semibold tracking-wide uppercase mb-4">WHAT IS SHRUTI TABLET</div>
-            <h2 className="text-5xl font-bold text-[#071B4D] mb-8" style={{ fontFamily: 'Satoshi, sans-serif' }}>
+            <h2 className="text-4xl sm:text-5xl font-bold text-[#071B4D] mb-8" style={{ fontFamily: 'Satoshi, sans-serif' }}>
               Built For Communication.<br/>Designed For Inclusion.
             </h2>
             <p className="text-xl text-[#071B4D]/70 mb-20 leading-relaxed font-medium">
@@ -244,7 +244,7 @@ function ShrutiTabletPage() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <h3 className="text-4xl font-bold text-[#071B4D] mb-16" style={{ fontFamily: 'Satoshi, sans-serif' }}>
+            <h3 className="text-3xl sm:text-4xl font-bold text-[#071B4D] mb-16" style={{ fontFamily: 'Satoshi, sans-serif' }}>
               Accessibility Made Intelligent.
             </h3>
           </FadeIn>
@@ -291,7 +291,7 @@ function ShrutiTabletPage() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-20 max-w-3xl mx-auto">
             <FadeIn>
-              <h2 className="text-5xl lg:text-6xl font-bold text-[#071B4D] mb-6" style={{ fontFamily: 'Satoshi, sans-serif' }}>
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#071B4D] mb-6" style={{ fontFamily: 'Satoshi, sans-serif' }}>
                 Powering Communication Through AI.
               </h2>
             </FadeIn>
@@ -351,7 +351,7 @@ function ShrutiTabletPage() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-20 max-w-3xl mx-auto">
             <FadeIn>
-              <h2 className="text-5xl lg:text-6xl font-bold text-[#071B4D] mb-6 tracking-tight" style={{ fontFamily: 'Satoshi, sans-serif' }}>
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#071B4D] mb-6 tracking-tight" style={{ fontFamily: 'Satoshi, sans-serif' }}>
                 Performance Designed For Everyday Accessibility.
               </h2>
             </FadeIn>
@@ -384,7 +384,7 @@ function ShrutiTabletPage() {
                 <motion.img 
                   src={img1} 
                   alt="Shruti Tablet Specifications" 
-                  className="relative z-10 w-full max-w-sm drop-shadow-2xl"
+                  className="relative z-10 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg drop-shadow-2xl"
                   animate={{ y: [-10, 10, -10] }}
                   transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
                 />
@@ -406,7 +406,7 @@ function ShrutiTabletPage() {
 
         <div className="container mx-auto px-6 relative z-10">
           <FadeIn>
-            <h2 className="text-5xl lg:text-6xl font-bold text-[#071B4D] mb-16 text-center" style={{ fontFamily: 'Satoshi, sans-serif' }}>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#071B4D] mb-16 text-center" style={{ fontFamily: 'Satoshi, sans-serif' }}>
               Built For Everyday Inclusion.
             </h2>
           </FadeIn>
@@ -449,7 +449,7 @@ function ShrutiTabletPage() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <FadeIn>
-              <div className="relative max-w-sm mx-auto lg:max-w-md">
+              <div className="relative max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto lg:mr-auto lg:ml-0">
                 <div className="absolute -inset-4 bg-gradient-to-r from-[#2A7FFF]/10 to-[#FF4F95]/10 blur-2xl rounded-[3rem] -z-10" />
                 <img src={img6} alt="Shruti Tablet Benefits" className="w-full rounded-[2rem] mix-blend-multiply" />
               </div>
@@ -457,7 +457,7 @@ function ShrutiTabletPage() {
             
             <div>
               <FadeIn delay={0.1}>
-                <h2 className="text-5xl font-bold text-[#071B4D] mb-12" style={{ fontFamily: 'Satoshi, sans-serif' }}>
+                <h2 className="text-4xl sm:text-5xl font-bold text-[#071B4D] mb-12" style={{ fontFamily: 'Satoshi, sans-serif' }}>
                   Technology That Creates Independence.
                 </h2>
               </FadeIn>
@@ -504,7 +504,7 @@ function ShrutiTabletPage() {
 
         <div className="container mx-auto px-6 relative z-10">
           <FadeIn>
-            <h2 className="text-5xl lg:text-7xl font-bold text-center mb-8" style={{ fontFamily: 'Satoshi, sans-serif' }}>
+            <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-center mb-8" style={{ fontFamily: 'Satoshi, sans-serif' }}>
               Building A More <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#2A7FFF] to-[#FF4F95]">Inclusive Future.</span>
             </h2>
@@ -545,7 +545,7 @@ function ShrutiTabletPage() {
         
         <div className="container mx-auto px-6 relative z-10 text-center">
           <FadeIn>
-            <h2 className="text-5xl lg:text-7xl font-bold text-white mb-8 tracking-tight" style={{ fontFamily: 'Satoshi, sans-serif' }}>
+            <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-8 tracking-tight" style={{ fontFamily: 'Satoshi, sans-serif' }}>
               Communication Without Barriers.
             </h2>
             <p className="text-xl lg:text-2xl text-white/80 max-w-3xl mx-auto mb-12 font-light leading-relaxed">
