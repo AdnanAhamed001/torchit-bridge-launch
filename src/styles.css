@@ -104,8 +104,9 @@
     font-feature-settings: "ss01", "cv11";
   }
   h1,h2,h3,h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
-  html, body, #root { margin: 0; padding: 0; width: 100%; max-width: 100%; overflow-x: hidden; }
-  .container, main, section { max-width: 100%; overflow-x: hidden; }
+  html, body, #root { margin: 0; padding: 0; width: 100%; max-width: 100%; }
+  body { overflow-x: hidden; }
+  .container, main, section { max-width: 100%; }
   img { max-width: 100%; height: auto; }
 }
 

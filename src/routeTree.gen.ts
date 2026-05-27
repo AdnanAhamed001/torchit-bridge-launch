@@ -9,11 +9,17 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ShrutiTabletRouteImport } from './routes/shruti-tablet'
 import { Route as LowVisionSolutionsRouteImport } from './routes/low-vision-solutions'
 import { Route as CsrRouteImport } from './routes/csr'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const ShrutiTabletRoute = ShrutiTabletRouteImport.update({
+  id: '/shruti-tablet',
+  path: '/shruti-tablet',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LowVisionSolutionsRoute = LowVisionSolutionsRouteImport.update({
   id: '/low-vision-solutions',
   path: '/low-vision-solutions',
@@ -40,12 +46,14 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/csr': typeof CsrRoute
   '/low-vision-solutions': typeof LowVisionSolutionsRoute
+  '/shruti-tablet': typeof ShrutiTabletRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/csr': typeof CsrRoute
   '/low-vision-solutions': typeof LowVisionSolutionsRoute
+  '/shruti-tablet': typeof ShrutiTabletRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -53,13 +61,25 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/csr': typeof CsrRoute
   '/low-vision-solutions': typeof LowVisionSolutionsRoute
+  '/shruti-tablet': typeof ShrutiTabletRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/csr' | '/low-vision-solutions'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/csr'
+    | '/low-vision-solutions'
+    | '/shruti-tablet'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/csr' | '/low-vision-solutions'
-  id: '__root__' | '/' | '/about' | '/csr' | '/low-vision-solutions'
+  to: '/' | '/about' | '/csr' | '/low-vision-solutions' | '/shruti-tablet'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/csr'
+    | '/low-vision-solutions'
+    | '/shruti-tablet'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -67,10 +87,18 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   CsrRoute: typeof CsrRoute
   LowVisionSolutionsRoute: typeof LowVisionSolutionsRoute
+  ShrutiTabletRoute: typeof ShrutiTabletRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/shruti-tablet': {
+      id: '/shruti-tablet'
+      path: '/shruti-tablet'
+      fullPath: '/shruti-tablet'
+      preLoaderRoute: typeof ShrutiTabletRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/low-vision-solutions': {
       id: '/low-vision-solutions'
       path: '/low-vision-solutions'
@@ -107,6 +135,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   CsrRoute: CsrRoute,
   LowVisionSolutionsRoute: LowVisionSolutionsRoute,
+  ShrutiTabletRoute: ShrutiTabletRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

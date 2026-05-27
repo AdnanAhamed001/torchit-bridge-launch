@@ -14,20 +14,20 @@ import {
 } from "lucide-react";
 import teamImage from "@/assets/ongc-event.jpg";
 import mapPlaceholder from "@/assets/irctc-distribution.jpg";
-import internationalImg from "@/assets/leadership-page/international.jpeg";
+import internationalImg from "@/assets/leadership-page/international.webp";
 
-import digantImg from "@/assets/leadership-page/Digant.png";
-import dineshImg from "@/assets/leadership-page/Dinesh.png";
-import drBhushanImg from "@/assets/leadership-page/Dr-Bhushan.png";
-import drHomiImg from "@/assets/leadership-page/Dr.-Homiyar-Mobedji.png";
-import drRitaImg from "@/assets/leadership-page/Dr-Rita-Poptani.png";
-import hunnyImg from "@/assets/leadership-page/Hunny.png";
-import hunny1Img from "@/assets/leadership-page/Hunny-1.jpg";
-import mrAshishImg from "@/assets/leadership-page/Mr-Ashish.png";
-import mrsGitaImg from "@/assets/leadership-page/Mrs-Gita.png";
-import nirmalImg from "@/assets/leadership-page/Nirmal.png";
-import premImg from "@/assets/leadership-page/Prem.png";
-import mrKelanImg from "@/assets/leadership-page/mr-Kelan-Dosh.png";
+import digantImg from "@/assets/leadership-page/Digant.webp";
+import dineshImg from "@/assets/leadership-page/Dinesh.webp";
+import drBhushanImg from "@/assets/leadership-page/Dr-Bhushan.webp";
+import drHomiImg from "@/assets/leadership-page/Dr.-Homiyar-Mobedji.webp";
+import drRitaImg from "@/assets/leadership-page/Dr-Rita-Poptani.webp";
+import hunnyImg from "@/assets/leadership-page/Hunny.webp";
+import hunny1Img from "@/assets/leadership-page/Hunny-1.webp";
+import mrAshishImg from "@/assets/leadership-page/Mr-Ashish.webp";
+import mrsGitaImg from "@/assets/leadership-page/Mrs-Gita.webp";
+import nirmalImg from "@/assets/leadership-page/Nirmal.webp";
+import premImg from "@/assets/leadership-page/Prem.webp";
+import mrKelanImg from "@/assets/leadership-page/mr-Kelan-Dosh.webp";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -105,7 +105,7 @@ function GhostText({
 
 function HeroSection() {
   return (
-    <section className="relative min-h-[80vh] pt-10 pb-32 flex flex-col justify-center bg-[#FAFBFD] overflow-hidden">
+    <section className="relative min-h-[600px] lg:min-h-[800px] pt-10 pb-32 flex flex-col justify-center bg-[#FAFBFD] overflow-hidden">
       {/* Hero Ghost Typography */}
       <GhostText text="INCLUSION" positionClass="top-0 left-0 w-full flex justify-center pt-8" size="text-[18vw] lg:text-[20vw]" delay={0.1} />
 
@@ -173,8 +173,8 @@ function HeroSection() {
 
 function ImpactStrip() {
   const stats = [
-    { value: "2M+", label: "Lives Impacted" },
-    { value: "40+", label: "Countries" },
+    { value: "1000+", label: "NGOs" },
+    { value: "70+", label: "Corporate Partners" },
     { value: "8+ Yrs", label: "Innovation" },
     { value: "Affordable", label: "Technology" },
   ];
@@ -191,7 +191,7 @@ function ImpactStrip() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 lg:gap-6">
           {stats.map((stat, i) => (
             <div key={i} className={`text-center px-1 sm:px-4 ${i > 1 ? 'pt-2 md:pt-0' : ''}`}>
-              <div className="text-2xl sm:text-3xl lg:text-5xl font-black text-[#2A7FFF] font-space-grotesk mb-1 sm:mb-2 tracking-tighter sm:tracking-tight">
+              <div className="text-xl sm:text-3xl lg:text-5xl font-black text-[#2A7FFF] font-space-grotesk mb-1 sm:mb-2 tracking-tighter sm:tracking-tight">
                 {stat.value}
               </div>
               <div className="text-[10px] sm:text-sm font-bold text-[#0A1733]/60 font-manrope uppercase tracking-widest">
@@ -226,9 +226,9 @@ function FounderMessage() {
                 className="w-full h-full object-cover" 
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A1733]/90 via-[#0A1733]/20 to-transparent" />
-              <div className="absolute bottom-10 left-10 right-10">
-                <div className="text-white font-black text-4xl font-satoshi mb-2">Hunny Bhagchandani</div>
-                <div className="text-[#FF4F95] font-bold text-lg font-manrope uppercase tracking-wider">Founder, Torchit</div>
+              <div className="absolute bottom-6 left-6 right-6 lg:bottom-10 lg:left-10 lg:right-10">
+                <div className="text-white font-black text-3xl lg:text-4xl font-satoshi mb-1 lg:mb-2 leading-tight">Hunny Bhagchandani</div>
+                <div className="text-[#FF4F95] font-bold text-base lg:text-lg font-manrope uppercase tracking-wider">Founder, Torchit</div>
               </div>
             </div>
           </motion.div>
@@ -530,8 +530,8 @@ function GlobalImpactMap() {
                 { n: "100+", l: "Communities" }
               ].map((stat, i) => (
                 <div key={i}>
-                  <div className="text-5xl font-black text-[#F8C12A] font-space-grotesk mb-2">{stat.n}</div>
-                  <div className="text-white/60 font-manrope font-bold uppercase tracking-widest text-sm">{stat.l}</div>
+                  <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#F8C12A] font-space-grotesk mb-1 lg:mb-2">{stat.n}</div>
+                  <div className="text-white/60 font-manrope font-bold uppercase tracking-widest text-xs lg:text-sm">{stat.l}</div>
                 </div>
               ))}
             </div>
